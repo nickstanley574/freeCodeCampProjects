@@ -1,8 +1,41 @@
+
+
+html,body {
+  text-align: center;
+  min-width:260px;
+	font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
+}
+
+#main {
+  padding:15px;
+  border-radius:5px;
+  border-radius:5px;
+  background:#eee;
+}
+
+img{
+  max-width: 100%; 
+  width: 600px;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+#img-div {
+  margin-top: 20px;
+  width: 100%;
+}
+#img-caption{
+  margin:10px;
+  text-align: center;
+  font-size: x-small;
+}
+
+#tribute-info {
+  text-align:left;
+  max-width:75%;
+  margin:0 auto;
+}
+#overview, #timeline {
+  text-align:center;
   
-  img{
-    max-width: 100%; 
-    width: 400px;
-    display: block;
-    height: auto;
-    margin: auto;
-  }
+}
