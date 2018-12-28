@@ -32,12 +32,29 @@
                 <option disabled value> Select a server</option>
                 <option  value="Guinan">Guinan</option>
                 <option  value="Rex">Rex</option>
-                <option  value="Dixon">Quark</option>
+                <option  value="Dixon">Dixon</option>
             </select>
 
+            <label id="service-label">What is your overall impression of Ten Forward?</label>
+            <input type="radio" name="service" value="Bad" > Bad<br>
+            <input type="radio" name="service" value="Good"> Good<br>
+            <input type="radio" name="service" value="Excellent"> Excellent<br>
+
+            <label id="drinks-label">What is your overall impression of Ten Forward?</label>
+            <input type="checkbox" name="drinks" value="prime_directive">Prime Directive<br>
+            <input type="checkbox" name="drinks" value="captains_holiday">Captain’s Holiday<br>
+            <input type="checkbox" name="drinks" value="ressikan_flute"> Ressikan Flute<br>
+            <input type="checkbox" name="drinks" value="stovokor">Stovokor<br>
+            <input type="checkbox" name="drinks" value="beam_me_up">Beam Me Up<br>
+            <input type="checkbox" name="drinks" value="fuzzy_tribble">Fuzzy Tribble<br>
+            <input type="checkbox" name="drinks" value="pattern_buffer">Pattern Buffer<br>
+            <input type="checkbox" name="drinks" value="mind_meld_mojita">Mind Meld Mojita<br>
+            <input type="checkbox" name="drinks" value="core_breach">Core Breach<br>
+
+            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+
+            <button id="submit" type="submit">Submit</button>
         </form>
-
-
     </body>
 </html>
 
