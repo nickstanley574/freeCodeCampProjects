@@ -8,9 +8,9 @@ html,body {
 
 #main {
   padding:15px;
-  border-radius:5px;
-  border-radius:5px;
+  border-radius:10px;
   background:#eee;
+  
 }
 
 img{
@@ -21,8 +21,10 @@ img{
   margin: auto;
 }
 #img-div {
-  margin-top: 20px;
   width: 100%;
+  background:white;
+  border:10px solid white;
+
 }
 #img-caption{
   margin:10px;
@@ -35,7 +37,15 @@ img{
   max-width:75%;
   margin:0 auto;
 }
-#overview, #timeline {
+#overview, #timeline, #obama-remarks {
+  margin-top: 50px;
   text-align:center;
-  
+}
+#landing-phases {
+  margin-top: 30px;
+  width: 300px;
+}
+
+blockquote{
+  font-style: italic;
 }
