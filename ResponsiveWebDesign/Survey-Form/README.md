@@ -7,7 +7,7 @@ FROM:https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-
 
 * You can use HTML, JavaScript, and CSS to complete this project. Plain CSS is recommended because that is what the lessons have covered so far and you should get some practice with plain CSS. You can use Bootstrap or SASS if you choose. Additional technologies (just for example jQuery, React, Angular, or Vue) are not recommended for this project, and using them is at your own risk. Other projects will give you a chance to work with different technology stacks like React. We will accept and try to fix all issue reports that use the suggested technology stack for this project. Happy coding!
 
-- [ ] User Story #1: I can see a title with id="title" in H1 sized text.
+- [x] User Story #1: I can see a title with id="title" in H1 sized text.
 - [ ] User Story #2: I can see a short explanation with id="description" in P sized text.
 - [ ] User Story #3: I can see a form with id="survey-form".
 - [ ] User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
