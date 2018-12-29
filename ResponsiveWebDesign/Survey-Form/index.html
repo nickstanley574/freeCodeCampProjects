@@ -18,42 +18,90 @@
         </p>
 
         <form id="survey-form">
-            <label id="name-label"> NAME</label>
-            <input id="name" type="text" size="30", placeholder="e.g. Kamin Picard", required>
+            <div class="row">
+                <div class="label">
+                    <label id="name-label">NAME</label>
+                </div>
+                <div class="rightside">
+                    <input id="name" type="text" class="input" size="30", placeholder="e.g. Kamin Picard", required>
+                </div>
+            </div>
 
-            <label id="email-label"> EMAIL </label>
-            <input id="email" type="email" size="30", placeholder="e.g. me@starfleet.ufp", required>
-            
-            <label id="number-label">GUEST ID </label>
-            <input id="number" type="number" size="5", min="11111", max="99999" placeholder="e.g. 12345", required>
+            <div class="row">
+                <div class="label">
+                    <label id="email-label">EMAIL</label>
+                </div>
+                <div class="rightside">
+                    <input id="email" type="email" class="input" size="30", placeholder="e.g. me@starfleet.ufp", required>
+                </div>
+            </div>
 
-            Who is your Favorite Server? 
-            <select id="dropdown" name="fav-server" class="dropdown">
-                <option disabled value> Select a server</option>
-                <option  value="Guinan">Guinan</option>
-                <option  value="Rex">Rex</option>
-                <option  value="Dixon">Dixon</option>
-            </select>
+            <div class="row">
+                <div class="label">
+                    <label id="number-label">GUEST ID</label>
+                </div>
+                <div class="rightside">
+                    <input id="number" type="number" class="input" size="5", min="11111", max="99999" placeholder="e.g. 12345", required>
+                </div>
+            </div>
 
-            <label id="service-label">What is your overall impression of Ten Forward?</label>
-            <input type="radio" name="service" value="Bad" > Bad<br>
-            <input type="radio" name="service" value="Good"> Good<br>
-            <input type="radio" name="service" value="Excellent"> Excellent<br>
+            <div class="row">
+                <div class="label">
+                    <label id="service-label">What is your overall impression of Ten Forward?</label>
+                </div>
+                <div class="rightside">
+                    <input type="radio" name="service" value="petaQ">petaQ<br>
+                    <input type="radio" name="service" value="Bad">Bad<br>
+                    <input type="radio" name="service" value="Good">Good<br>
+                    <input type="radio" name="service" value="Excellent">Excellent<br>
+                </div>
+   
 
-            <label id="drinks-label">What is your overall impression of Ten Forward?</label>
-            <input type="checkbox" name="drinks" value="prime_directive">Prime Directive<br>
-            <input type="checkbox" name="drinks" value="captains_holiday">Captain’s Holiday<br>
-            <input type="checkbox" name="drinks" value="ressikan_flute"> Ressikan Flute<br>
-            <input type="checkbox" name="drinks" value="stovokor">Stovokor<br>
-            <input type="checkbox" name="drinks" value="beam_me_up">Beam Me Up<br>
-            <input type="checkbox" name="drinks" value="fuzzy_tribble">Fuzzy Tribble<br>
-            <input type="checkbox" name="drinks" value="pattern_buffer">Pattern Buffer<br>
-            <input type="checkbox" name="drinks" value="mind_meld_mojita">Mind Meld Mojita<br>
-            <input type="checkbox" name="drinks" value="core_breach">Core Breach<br>
+            <div class="row">
+                    <div class="label">
+                        <label id="server-label">Who is your Favorite Server?</label>
+                    </div>
+                    <div class="rightside">
+                        <select id="dropdown" name="fav-server" class="dropdown">
+                            <option disabled value> Select a server</option>
+                            <option  value="Guinan">Guinan</option>
+                            <option  value="Rex">Rex</option>
+                            <option  value="Dixon">Dixon</option>
+                        </select>
+                    </div>
+                </div>
 
-            <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="row">
+                <div class="label">
+                    <label id="drinks-label">What your favorite drinks on our menu?</label>
+                </div>
+                <div class="rightside">
+                        <input type="checkbox" name="drinks" value="prime_directive">Prime Directive<br>
+                        <input type="checkbox" name="drinks" value="captains_holiday">Captain’s Holiday<br>
+                        <input type="checkbox" name="drinks" value="ressikan_flute"> Ressikan Flute<br>
+                        <input type="checkbox" name="drinks" value="stovokor">Stovokor<br>
+                        <input type="checkbox" name="drinks" value="beam_me_up">Beam Me Up<br>
+                        <input type="checkbox" name="drinks" value="fuzzy_tribble">Fuzzy Tribble<br>
+                        <input type="checkbox" name="drinks" value="pattern_buffer">Pattern Buffer<br>
+                        <input type="checkbox" name="drinks" value="mind_meld_mojita">Mind Meld Mojita<br>
+                        <input type="checkbox" name="drinks" value="core_breach">Core Breach<br>
+                        <input type="checkbox" name="drinks" value="good_day_to_die">Good Day to Die<br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="comments">
+                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+
+            <!-- <div class="label2">
+                <label id="name-label">NAME</label>
+            </div> -->
 
             <button id="submit" type="submit">Submit</button>
+
         </form>
     </body>
 </html>
