@@ -41,6 +41,12 @@ html, body {
     width: 48%;
     vertical-align: middle;
 }
+
+.input-field {
+    width: 40%;
+    border-radius: 2px;
+}
+
 .dropdown {
     height: 35px;
     width: 140px;
