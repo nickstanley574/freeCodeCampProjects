@@ -2,7 +2,10 @@ html,body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
+  min-width: 1100;
 }
+
+/* Nav */
 
 header #nav-bar {
   background-color: #FFCC00;
@@ -46,9 +49,9 @@ li a:hover {
 }
 
 .container {
-  padding-top: 85px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-top: 35px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 footer {
@@ -102,9 +105,17 @@ input[type="submit"]:hover {
   height: auto;
 }
 
+#railcar-header {
+  align-items: center;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 200%;
+  padding-top: 35px;
+}
 
-#our-fleet {
-  margin-top: 60px;
+.railcar-row {
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -132,4 +143,32 @@ input[type="submit"]:hover {
 
 .railcar-features {
   padding: 10px;
+}
+
+.btn {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.railcar-img {
+  margin-top: 8px;
+}
+
+.events {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding-top: 20px;
+  margin-top: 35px;
+}
+
+#mr261-video{
+  width: calc(100%  / 3);  
+}
+
+.event-name {
+  text-align:center;
+}
+
+.event-media {
+  text-align: left;
 }
