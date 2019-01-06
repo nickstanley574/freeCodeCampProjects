@@ -27,7 +27,7 @@ header .nav-link {
   display: block;
   color: gray;
   text-align: center;
-  padding: 1.75em;
+  padding: 1.65em;
   text-decoration: none;
   font-weight: bold;
 }
@@ -128,17 +128,16 @@ input[type="submit"]:hover {
   text-align: center;
   width: calc(100%  / 3);
   margin: 10px;
-  border: 1px solid #000;
-  border-radius: 2px;
 }
 
 .railcar-name {
-  background-color: #ddd;
-  color: black;
+  background-color: #CCCCCC;
+  color: #003366;
   padding: 15px 0;
   width: 100%;
   text-transform: uppercase;
   font-weight: 700;
+  border-radius: 5px;
 }
 
 .railcar-features {
@@ -155,7 +154,6 @@ input[type="submit"]:hover {
 }
 
 .event {
-  border: 1px solid #000;
   border-radius: 5px;
   margin-bottom: 35px;
   height: 300px;
@@ -166,9 +164,11 @@ input[type="submit"]:hover {
 .event-name-container {
   height: 20%;
   font-weight: 700;
-  background-color: #FFCC00;
+  background-color: #e05038;
   display: flex;               /* establish flex container */
   align-items: center;         /* vertically center flex items */
+  width:100%;
+  border-radius: 5px;
 }
 
 .event-name {
@@ -183,12 +183,18 @@ input[type="submit"]:hover {
   
 }
 
-.event-media {
+.event-media-container {
   width: 50%;
   height: 100%;
   float: left;
-
 }
+
+.event-media {
+  height:90%;
+  width: 90%;
+  padding: 10px;
+}
+
 .event-copy-container {
   text-align: left;
   width:50%;
@@ -201,10 +207,4 @@ input[type="submit"]:hover {
 .event-copy {
   padding-left: 5%;
   padding-right: 5%;
-}
-
-#mr261-video {
-  height:90%;
-  width: 90%;
-  padding: 10px;
 }
