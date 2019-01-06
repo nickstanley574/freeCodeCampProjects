@@ -154,7 +154,6 @@ input[type="submit"]:hover {
   margin-top: 8px;
 }
 
-
 .event {
   border: 1px solid #000;
   border-radius: 5px;
@@ -164,7 +163,7 @@ input[type="submit"]:hover {
   margin: 35px auto;
 }
 
-.event-name {
+.event-name-container {
   height: 20%;
   font-weight: 700;
   background-color: #FFCC00;
@@ -172,13 +171,10 @@ input[type="submit"]:hover {
   align-items: center;         /* vertically center flex items */
 }
 
-.event-name-span {
+.event-name {
   width: 100%;
   text-align:center;
 }
-
-
-
 
 .event-promo {
   width: auto;
