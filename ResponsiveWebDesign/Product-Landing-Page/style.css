@@ -154,21 +154,61 @@ input[type="submit"]:hover {
   margin-top: 8px;
 }
 
-.events {
+
+.event {
   border: 1px solid #000;
   border-radius: 5px;
-  padding-top: 20px;
-  margin-top: 35px;
-}
-
-#mr261-video{
-  width: calc(100%  / 3);  
+  margin-bottom: 35px;
+  height: 300px;
+  max-width: 700px;
+  margin: 35px auto;
 }
 
 .event-name {
+  height: 20%;
+  font-weight: 700;
+  background-color: #FFCC00;
+  display: flex;               /* establish flex container */
+  align-items: center;         /* vertically center flex items */
+}
+
+.event-name-span {
+  width: 100%;
   text-align:center;
 }
 
+
+
+
+.event-promo {
+  width: auto;
+  height: 80%;
+  overflow: hidden;
+  
+}
+
 .event-media {
+  width: 50%;
+  height: 100%;
+  float: left;
+
+}
+.event-copy-container {
   text-align: left;
+  width:50%;
+  height:100%;
+  float: left;
+  display: flex;               /* establish flex container */
+  align-items: center;         /* vertically center flex items */
+}
+
+.event-copy {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#mr261-video {
+  height:90%;
+  width: 90%;
+  padding: 10px;
 }
