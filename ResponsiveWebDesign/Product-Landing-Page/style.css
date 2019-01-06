@@ -3,13 +3,11 @@ html,body {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   min-width: 1100;
-  background-color: rgb(248, 244, 216);
+  background-color:whitesmoke;
 }
 
-/* Nav */
-
 header #nav-bar {
-  background-color: #8D6856;
+  background-color: #96858F;
   padding: 0;
   position: fixed;
   width: 100%;
@@ -26,15 +24,17 @@ header ul {
 
 header .nav-link {
   display: block;
-  color: #2B0829;
+  color: white;
   text-align: center;
-  padding: 1.65em;
+  padding: 1em;
   text-decoration: none;
   font-weight: bold;
+  font-size: 84%;
+
 }
 
 li a:hover {
-  background-color: #cccccc;
+  background-color: rgb(156, 146, 152);
 }
 
 #header-img {
@@ -133,8 +133,8 @@ input[type="submit"]:hover {
 }
 
 .railcar-name {
-  background-color: #2B0829;
-  color: #F3ECB6;
+  background-color: #6D7993;
+  color: white;;
   padding: 15px 0;
   width: 100%;
   text-transform: uppercase;
@@ -166,8 +166,8 @@ input[type="submit"]:hover {
 .event-name-container {
   height: 20%;
   font-weight: 700;
-  background-color: #C0AD82;
-  color: #2B0829;
+  background-color: #9099a2;
+  color: white;
   display: flex;               /* establish flex container */
   align-items: center;         /* vertically center flex items */
   width:100%;
