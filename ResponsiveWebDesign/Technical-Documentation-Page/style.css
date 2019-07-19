@@ -2,21 +2,56 @@ html,
 body {
   min-width: 290px;
   color: hsl(230, 4%, 31%);
-  background-color: #ffffff;
+  background-color: whitesmoke;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
+  font-size: 90%
 }
 
 #navbar {
   position: fixed;
-  background-color: gray;
+  background-color: #b8a9c9;
   min-width: 220px;
   top: 0px;
   left: 0px;
   width: 100px;
   height: 100%;
-  border-right: solid;
-  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#navbar ul {
+  height: 88%;
+  margin-top: 0px;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: whitesmoke;
+  border-top: 0.5px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #622569;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+header {
+  color: black;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  text-align: left;
+  font-size: 1.4em;
+  font-weight: bold;
+
 }
 
 #main-doc {
@@ -25,31 +60,43 @@ body {
   padding: 20px;
   margin-bottom: 110px;
 }
+
+#navbar_title {
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #622569;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.8em;
+
+}
+
+
 section li {
   margin: 15px 0px 0px 20px;
 }
 
 section article {
-  color: #4d4e53;
+  color: #242427;
   margin: 15px;
   font-size: 0.96em;
 }
 
 code {
   display: block;
-  /* text-align: left; */
+  text-align: left;
   white-space: pre;
   position: relative;
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-  background-color: #f7f7f7;
+  background-color: black;
+  color: white;
   padding: 15px;
   margin: 5px;
   border-radius: 5px;
   font-size: 85%;
-  
-
 }
 
 @media only screen and (max-width: 815px) {

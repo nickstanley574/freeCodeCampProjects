@@ -14,7 +14,7 @@
 </head>
 
 <nav id="navbar">
-    <header>Networking Cheatsheet</header>
+    <header id="navbar_title">Networking Cheatsheet</header>
     <ul>
         <li> <a class="nav-link" href="#Vocabulary">Vocabulary</a></li>
         <li> <a class="nav-link" href="#Binary_to_Decimal">Binary to Decimal</a></li>
@@ -123,9 +123,13 @@ Example:
 192         .168            .0              .15              
 1100 0000   .1010 1000      .0000 0000      .0000 1111
 255         .255            .255            .0
-1111 1111   .1111 1111      .1111 1111      .0000 0000        # Any bit that is a "1" is the "network bit field" and "0" is the "rest bit field"
+1111 1111   .1111 1111      .1111 1111      .0000 0000        
+# Any bit that is a "1" is the "network bit field" and "0" is the "rest bit field"
+
 ---- above is the same has the below ----
-192         .168            .0              .15         /24   # This means that the first 24 bits of the IP address given are considered significant for the network routing.
+
+192         .168            .0              .15         /24   
+# This means that the first 24 bits of the IP address given are considered significant for the network routing.
             </code>
 
 
