@@ -14,102 +14,351 @@
 </head>
 
 <nav id="navbar">
-        <header>JS Documentation</header>
-        <ul>
-          <li> <a class="nav-link" href="#Section_One">Section One</a></li>
-          <li> <a class="nav-link" href="#Section_Two">Section Two</a></li>
-          <li> <a class="nav-link" href="#Section_Three">Section Three</a></li>
-          <li> <a class="nav-link" href="#Section_Four">Section Four</a></li>
-          <li> <a class="nav-link" href="#Section_Five">Section Five</a></li>
-
-        </ul>
-      </nav>
+    <header>Networking Cheatsheet</header>
+    <ul>
+        <li> <a class="nav-link" href="#Vocabulary">Vocabulary</a></li>
+        <li> <a class="nav-link" href="#Binary_to_Decimal">Binary to Decimal</a></li>
+        <li> <a class="nav-link" href="#The_OSI_Model">The OSI Model</a></li>
+        <li> <a class="nav-link" href="#AWS_Networking">AWS Networking</a></li>
+        <li> <a class="nav-link" href="#Tools_and_Commands">Tools and Commands</a></li>
+    </ul>
+</nav>
 
 
 <body>
     <main id="main-doc">
 
-        <section class="main-section" id="Section_One">
-            <header>Section One</header>
+        <section class="main-section" id="Vocabulary">
+            <header>Vocabulary</header>
             <p>
-                p1
+                Before learning anything you needs to learn the basic vocabulary of a subject you are trying to master.
+                This way when reading the rest of the documentation you have a basic understanding of key concepts.
+                A added benefit is you also know you can look back at this section to refresh you memory if a concepts
+                confuses you.
             </p>
-            <code>
-                print("Hello World! 1")
-            </code>
-            <p>
-                p2
-            </p>
-        </section>
-
-        <section class="main-section" id="Section_Two">
-            <header>Section Two</header>
-            <p>
-                p3
-            </p>
-            <code>
-                print("Hello World! 2")
-            </code>
-            <p>
-                p4
-            </p>
-        </section>
-
-        <section class="main-section" id="Section_Three">
-            <header>Section Three</header>
-            <p>
-                p5
-            </p>
-            <code>
-                print("Hello World! 3")
-            </code>
-            <p>
-                p6
-            </p>
-        </section>
-
-        <section class="main-section" id="Section_Four">
-            <header>Section Four</header>
-            <p>
-                p7
-            </p>
-            <code>
-                print("Hello World! 4")
-            </code>
-            <p>
-                p8
-            </p>
-
             <ul>
-                <li>
-                    Blue
+                <li> <b>Default Gateway</b> - The device that passes traffic from the local subnet to devices on other
+                    subnets.</li>
+                <li> <b>Subnet Mask</b> - a number that defines a range of IP addresses that can be used in a network
                 </li>
-                <li>
-                    Green
-                </li>
-                <li>
-                    Red
-                </li>
-                <li>
-                    Yellow
-                </li>
-                <li>
-                    Black
-                </li>
+                <li> <b>Subnetting</b> - The process of dividing a network into smaller network sections. This can be
+                    useful for many different purposes and helps isolate groups of hosts together and deal with them
+                    easily.</li>
+                <li> <b>Netmask</b> - a 32-bit mask used to divide an IP address into subnets and specify the network's
+                    available hosts.</li>
+                <li> <b>Connection</b> - In networking, a connection refers to pieces of related information that are
+                    transfered through a network.</li>
+                <li> <b>Packet</b> - A packet is, generally speaking, the most basic unit that is transfered over a
+                    network. When communicating over a network, packets are the envelopes that carry your data (in
+                    pieces) from one end point to the other.</li>
+                <li> <b>Protocol</b> - A protocol is a set of rules and standards that basically define a language that
+                    devices can use to communicate. There are a great number of protocols in use extensively in
+                    networking, and they are often implemented in different layers.</li>
+                <li> <b>Port</b> - A port is an address on a single machine that can be tied to a specific piece of
+                    software. It is not a physical interface or location, but it allows your server to be able to
+                    communicate using more than one application.
+                <li><b>Firewall</b> - A firewall is a program that decides whether traffic coming into a server or going
+                    out should be allowed. A firewall usually works by creating rules for which type of traffic is
+                    acceptable on which ports. Generally, firewalls block ports that are not used by a specific
+                    application on a server.</li>
+                <li><b>NAT</b> - NAT stands for network address translation. It is a way to translate requests that are
+                    incoming into a routing server to the relevant devices or servers that it knows about in the LAN.
+                    This is usually implemented in physical LANs as a way to route requests through one IP address to
+                    the necessary backend servers.</li>
+                <li><b>VPN </b> - VPN stands for virtual private network. It is a means of connecting separate LANs
+                    through the internet, while maintaining privacy. This is used as a means of connecting remote
+                    systems as if they were on a local network, often for security reasons.</li>
+                <li><b>IP address</b> - An Internet Protocol address (IP address) is a logical numeric address that is
+                    assigned to every single computer, printer, switch, router or any other device that is part of a
+                    TCP/IP-based network.</li>
             </ul>
         </section>
 
-        <section class="main-section" id="Section_Five">
-            <header>Section Five</header>
+        <section class="main-section" id="Binary_to_Decimal">
+            <header>Binary to Decimal</header>
             <p>
-                p9
+                In mathematics and digital electronics, a binary number is a number expressed in the base-2 numeral
+                system or binary numeral system, which uses only two symbols:
+                typically "0" (zero) and "1" (one). Critical elements of computer networks like addresses, masks, and
+                keys all involve binary or hexadecimal numbers.
+                Understanding how such binary and hexadecimal numbers work is essential in building, troubleshooting,
+                and programming any network
             </p>
+
+            <p>
+                All binary numbers have equivalent decimal representations and vice versa. To convert binary and decimal
+                numbers manually, you must apply the mathematical
+                concept of positional values.You know that an IP address is numbers that represent a device on a
+                network, as a mailing address represents your home's location.
+                But in order to actually assign and use IP addresses, you must understand the format of these "numerical
+                identifiers" and the rules that pertain to them.
+                You may also have heard people referring to the four numerical values in an IP address as "octets".
+                Octet is, in fact, the correct term for describing the four
+                individual numbers that make up an IP address.
+            </p>
+
             <code>
-                print("Hello World! 4")
+128     64      32      16      8       4       2       1
+2^7     2^6     2^5     2^4     2^3     2^2     2^1     2^0    
+
+Example: 
+
+128 64  32  16  8   4   2   1 . 128 64  32  16  8   4   2   1 . 128 64  32  16  8   4   2   1 . 128 64  32  16  8   4   2   1    
+1   1   0   0   0   0   0   0 . 1   0   1   0   1   0   0   0 . 0   0   0   0   0   0   0   0 . 0   0   0   0   1   1   1   1 
+128+64 = 192                    128 + 32 + 8 = 168              = 0                             8 + 4 + 2 + 1 = 15 
+192                           . 168                            . 0                             . 15
+            </code>
+
+            <p>
+                Above, you can see that the bits with the values 64, 32, 8, 4 and 2 are all turned on. As mentioned
+                before, calculating the value of a
+                binary number means totaling all the values for the "on" bits. So for the binary value in the table,
+                01101110, we add together 64+32+8+4+2 to
+                get the number 110. Binary arithmetic is pretty easy once you know what's going on.
+            </p>
+
+            <code>
+8           .16             .24             .32         
+[ octet ]   .[ octet ]      .[ octet ]      .[ octet ]          
+192         .168            .0              .15              
+1100 0000   .1010 1000      .0000 0000      .0000 1111
+255         .255            .255            .0
+1111 1111   .1111 1111      .1111 1111      .0000 0000        # Any bit that is a "1" is the "network bit field" and "0" is the "rest bit field"
+---- above is the same has the below ----
+192         .168            .0              .15         /24   # This means that the first 24 bits of the IP address given are considered significant for the network routing.
+            </code>
+
+
+        </section>
+
+        <section class="main-section" id="The_OSI_Model">
+            <header>The OSI Model</header>
+            <p>
+                The Open Systems Interconnection model (OSI model) is a conceptual model that characterizes and
+                standardizes the communication functions of a telecommunication or
+                computing system without regard to its underlying internal structure and technology. Its goal is the
+                interoperability of diverse communication systems with standard
+                communication protocols. The model partitions a communication system into abstraction layers. The
+                original version of the model defined seven layers.
+            </p>
+
+            <p>
+                A layer serves the layer above it and is served by the layer below it. For example, a layer that
+                provides error-free communications across a network provides the path
+                needed by applications above it, while it calls the next lower layer to send and receive packets that
+                constitute the contents of that path. Two instances at the same layer
+                are visualized as connected by a horizontal connection in that layer.
+            </p>
+
+            <p>
+                A layer serves the layer above it and is served by the layer below it. For example, a layer that
+                provides error-free communications across a network provides the path
+                needed by applications above it, while it calls the next lower layer to send and receive packets that
+                constitute the contents of that path. Two instances at the same layer
+                are visualized as connected by a horizontal connection in that layer.
+            </p>
+
+            <p>
+                <b>Layer 1. Physical Layer - </b> The first layer of the seven layers of Open Systems Interconnection
+                (OSI) network model is called the Physical layer. Physical circuits
+                are created on the physical layer of Open Systems Interconnection (OSI) model. Physical layers describe
+                the electrical or optical signals used for communication.
+                Physical layer of the Open Systems Interconnection (OSI) model is only concerned with the physical
+                characteristics of electrical or optical signaling techniques
+                which includes the voltage of the electrical current used to transport the signal, the media type
+                (Twisted Pair, Coaxial Cable, Optical Fiber etc), impedance
+                characteristics, physical shape of the connector, Synchronization etc.
+            </p>
+
+            <p>
+                <b>Layer 2. Datalink Layer - </b> The Data Link layer resides above the Physical layer and below the
+                Network layer. Datalink layer is responsible for providing end-to-end
+                validity of the data being transmitted. The Data Link Layer is logically divided into two sublayers, The
+                Media Access Control (MAC) Sublayer and the Logical Link Control (LLC)
+                Sublayer.
+            </p>
+
+            <p>
+                <b>Layer 3. Network Layer - </b> The third layer of the seven layers of Open Systems Interconnection
+                (OSI) network model is the Network layer. The Network layer of the OSI model
+                is responsible for managing logical addressing information in the packets and the delivery of those
+                packets to the correct destination. Routers, which are special computers used to
+                build the network, direct the data packet generated by Network Layer using information stored in a table
+                known as routing table. The routing table is a list of available destinations
+                that are stored in memory on the routers. The network layer is responsible for working with logical
+                addresses. The logical addresses are used to uniquely identify a computer on the
+                network, but at the same time identify the network that system resides on. The logical address is used
+                by network layer protocols to deliver the packets to the correct network.
+                The Logical addressing system used in Network Layer is known as IP address.
+            </p>
+
+            <p>
+                <b>Layer 4. Transport Layer - </b> The Transport layer handles transport functions such as reliable or
+                unreliable delivery of the data to the destination. On the sending computer,
+                the transport layer is responsible for breaking the data into smaller packets, so that if any packet is
+                lost during transmission, the missing packets will be sent again.
+                Missing packets are determined by acknowledgments (ACKs) from the remote device, when the remote device
+                receives the packets. At the receiving system, the transport layer will be responsible
+                for opening all of the packets and reconstructing the original message. Another function of the
+                transport layer is TCP segment sequencing. Sequencing is a connection-oriented service
+                that takes TCP segments that are received out of order and place them in the right order.
+            </p>
+
+            <p>
+                <b>Layer 5. Session Layer - </b> The session layer is responsible for establishing, managing, and
+                terminating connections between applications at each end of the communication. In the connection
+                establishment phase, the service and the rules (who transmits and when, how much data can be sent at a
+                time etc.) for communication between the two devices are proposed. The participating devices must agree
+                on the rules.
+            </p>
+
+            <p>
+                <b>Layer 6. Presentation Layer - </b> When the presentation layer receives data from the application
+                layer, to be sent over the network, it makes sure that the data is in the proper format. If it is not,
+                the presentation layer converts the data to the proper format. On the other side of communication, when
+                the presentation layer receives network data from the session layer, it makes sure that the data is in
+                the proper format and once again converts it if it is not.
+            </p>
+
+            <p>
+                <b>Layer 7. Application Layer - </b> Application Layer is the top-most layer of the seven layered Open
+                Systems Interconnection (OSI) network model. Real traffic data will be often generated from the
+                Application Layer. This may be a web request generated from HTTP protocol, a command from telnet
+                protocol, a file download request from FTP protocol etc.
+            </p>
+
+        </section>
+
+        <section class="main-section" id="AWS_Networking">
+            <header>AWS Networking</header>
+            <p>
+                Amazon Web Services (AWS) provides the Networking tools and resources that enable you to securely
+                connect to the cloud and then isolate, control, and distribute your applications across EC2 compute
+                resources and all other relevant services in AWS. Networking Solutions available from AWS Partner
+                Network (APN) partners can help you establish your secure, scalable, cost-effective cloud presence more
+                rapidly. Whether you are planning to migrate to AWS or are looking to expand your established network
+                capabilities on the cloud, there are readily available tools and resources at your disposal to
+                accelerate the realization of your goals.
+            </p>
+
+            <ul>
+                <li> <b>VPC A virtual private cloud</b> - a private network space in which you can run your
+                    infrastructure. It has an address space (CIDR range) which you choose e.g. 10.0.0.0/16. This
+                    determines how many IP addresses you can assign within the VPC. The 10.0.0.0/16 address space can
+                    use the addresses from 10.0.0.0 to 10.0.255.255, which is 65,536 IP addresses.</li>
+                <li> <b>Availability Zones</b> - is an isolated location inside a region, at least one zone should be
+                    able to operate, even if others suffer outages</li>
+                <li> <b>Security Groups</b> - specifies ingress (inbound) and egress (outbound) traffic rules, limiting
+                    them to certain sources (inbound) and destinations (outbound). They are associated with EC2
+                    instances rather than subnets.</li>
+            </ul>
+
+            <p>
+                The complete picture of your virtual private network looks something like the picture below, with public
+                and private subnets spread across availability zones, network address translation sitting in the public
+                subnets and route tables to specify how packets are routed. EC2 instances are run in any subnet and have
+                security groups attached to them.
+            </p>
+
+
+
+            <code>
+                                         +-------+                                  
+                                         | ig-1  |                                  
+                                         |       |                                  
+        vpc-123: 10.0.0.0/16   |         |       |        |                         
+        +----------------------+---------+-------+--------+---------------------+
+        |                      |                          |                     |   
+        |  +-----+             |  +-----+                 |  +-----+            |   
+        |  | NAT |             |  | NAT |                 |  | NAT |            |   
+public  |  |     |             |  |     |                 |  |     |            |   
+subnets |  +-----+             |  +-----+                 |  +-----+            |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        |              +-------+                  +-------+             +-------+
+        |              | rt-1a |                  | rt-1b |             | rt-1c |
+        | 10.0.1.0/24  |       | 10.0.2.0/24      |       | 10.0.3.0/24 |       |   
+        -------+-----------------------------------------------------------------------+
+        | 10.0.4.0/24  | rt-2a | 10.0.5.0/24      | rt-2b | 10.0.6.0/24 | rt-2c |
+        |              |       |                  |       |             |       |   
+        |              +-------+                  +-------+             +-------+
+ private|                      |                          |                     |   
+ subnets|                      |                          |                     |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        |                      |                          |                     |   
+        +----------------------+--------------------------+---------------------+
+        |         AZ 1         |          AZ 2            |        AZ 3         |           
+
+</code>
+
+
+
+        </section>
+
+        <section class="main-section" id="Tools_and_Commands">
+            <header>Tools and Commands</header>
+            <p>
+                <b>ifconfig</b> is used to configure network interface parameters.
+            </p>
+
+            <code>
+[root@localhost ~]# ifconfig -a
+eno16777736: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
+        ether 00:0c:29:c5:a5:61 txqueuelen 1000 (Ethernet)
+        RX packets 0 bytes 0 (0.0 B)
+        RX errors 0 dropped 0 overruns 0 frame 0
+        TX packets 0 bytes 0 (0.0 B)
+        TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+lo: flags=73<UP,LOOPBACK,RUNNING> mtu 65536
+        inet 127.0.0.1 netmask 255.0.0.0
+        inet6 ::1 prefixlen 128 scopeid 0x10<host>
+        loop txqueuelen 0 (Local Loopback)
+        RX packets 2 bytes 140 (140.0 B)
+        RX errors 0 dropped 0 overruns 0 frame 0
+        TX packets 2 bytes 140 (140.0 B)
+        TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
+[root@localhost ~]#           
+                </code>
+            <p>
+                <b>traceroute</b> print the route packets take to network host.
+            </p>
+
+            <code>
+[root@localhost ~]# traceroute geekflare.com
+traceroute to geekflare.com (162.159.243.243), 30 hops max, 60 byte packets
+1 172.16.179.2 (172.16.179.2) 0.154 ms 0.074 ms 0.074 ms
+2 * * *
+3 * * *         
             </code>
             <p>
-                p10
+                <b>dig</b>  (Domain Information Groper) is a flexible tool for interrogating DNS name servers.
             </p>
+
+            <code>
+[root@localhost ~]# dig geekflare.com
+; <<>> DiG 9.9.4-RedHat-9.9.4-14.el7 <<>> geekflare.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 18699
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0005 , udp: 4000
+;; QUESTION SECTION:
+;geekflare.com.                                   IN        A
+;; ANSWER SECTION:
+geekflare.com.                        5          IN        A          162.159.244.243
+geekflare.com.                        5          IN        A          162.159.243.243
+;; Query time: 6 msec
+;; SERVER: 172.16.179.2#53(172.16.179.2)
+;; WHEN: Sun May 01 23:28:19 PDT 2016
+;; MSG SIZE rcvd: 74
+[root@localhost ~]#      
+                </code>
         </section>
     </main>
 
