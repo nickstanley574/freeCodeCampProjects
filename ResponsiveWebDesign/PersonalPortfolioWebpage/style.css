@@ -1,12 +1,57 @@
+html {
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+}
+
+.nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-link {
+    float: left;
+}
+
+.nav-link a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-link a:hover {
+    background-color: green;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
-    /* 18px */
     font-weight: 400;
     line-height: 1.4;
     color: var(--main-white);
 }
-
 
 .welcome-section {
     display: flex;
@@ -16,18 +61,11 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #000;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-}
-
-
-#navbar {
-    position: fixed;
-    top: 0px;
-    width: 100%;
+    background-image: linear-gradient(62deg, #2166ac 0%, #181719 100%);
 }
 
 @media (max-width: 28.75em) {
     .projects-section-header {
-      font-size: 4rem;
+        font-size: 4rem;
     }
-  }
+}
