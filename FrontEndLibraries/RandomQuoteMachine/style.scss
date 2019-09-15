@@ -1,0 +1,28 @@
+html,
+body {
+  background-color: tan;
+}
+
+div {
+  position:relative;
+  z-index: 2;
+}
+
+body {
+  font-weight:500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* #quote-card {
+  background-color: brown
+} */
+#quote-box {
+  background-color: white;
+}
+#tweet-quote {
+  background-color: red;
+}
