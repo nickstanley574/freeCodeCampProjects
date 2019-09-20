@@ -4,7 +4,7 @@ body {
 }
 
 #welcome { 
-  width:35%; 
+  width:40%; 
   text-align:center; 
   padding:20px; 
   margin:0 auto;
@@ -29,7 +29,6 @@ body {
   text-align:center;
   border:none;
   border-radius:20px;
-
   .quote {
     i{
       font-size:1.0em;
@@ -42,11 +41,28 @@ body {
     padding-top: 15px;
     text-align:center;
     font-size:1em;  
-
-
   }
-  
   .buttons {
+    #tweet-quote {
+      &:hover {
+        background-color: #a30d0d;
+      }
+    }
+    #new-quote {
+      &:hover {
+        background: repeating-linear-gradient(
+          45deg,
+        #fec013,
+        #fec013 10px,
+        #015d9c 10px,
+        #015d9c 20px
+      );
+       color: white;
+       font-weight: 900;
+       -webkit-text-stroke-width: 1.5px;
+       -webkit-text-stroke-color: black;
+      }
+    }
     .button {
       text-decoration: none;
       display: table;
@@ -57,16 +73,13 @@ body {
       border-radius:10px;
       color:#fff;
       background-color: #015d9c;
-      font-size:0.85em;
+      font-size:0.75em;
       margin-top:30px;
       text-align: center;
       float:left;
       cursor:pointer;
       &#new-quote {
         float:right;
-      }
-      &:hover {
-        opacity:0.8;
       }
     }
     .button-text {
