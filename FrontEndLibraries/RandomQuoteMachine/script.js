@@ -2,6 +2,10 @@ const projectName = "random-quote-machine";
 var tweetEndpoint = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="
 
 function getQuote() {
+
+    const rollSound = new Audio("janet_goodplace_boop.mp3");
+    rollSound.play();
+
     $.getJSON('data.json', function(json) {
         randomQuote = json.quotes[Math.floor(Math.random() * json.quotes.length)];
         quote = randomQuote.quote;
