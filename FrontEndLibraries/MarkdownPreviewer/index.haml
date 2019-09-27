@@ -1,11 +1,17 @@
 %html 
 
     .scripts
+        -# freecodecamp.org tests
         %script{:src => "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"}
+        -# react
         %script{:src => "https://unpkg.com/react@16/umd/react.development.js"}
         %script{:src => "https://unpkg.com/react-dom@16/umd/react-dom.development.js"}
         -# Don't use this in production
         %script{:src => "https://unpkg.com/@babel/standalone/babel.min.js"}
+        -# jQuery
+        %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"}
+        -# Angular Marked
+        %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js"}
 
     %link{:rel => :stylesheet, :type => :"text/css", :href => "style.css"}
 
@@ -13,13 +19,21 @@
         %title FCC: Markdown Previewer - nickstanley574
 
     %body 
-        FCC: Markdown Previewer - nickstanley574 - test
+        FCC: Markdown Previewer - nickstanley574
         
+
+    -# %script{:type => "text/babel", :src => }
     %script{:type => 'text/babel', :src => "script.js"}
     #app
+    %strong{:class => "code", :id => "message"} -------------
+    %script{:type => 'text/babel', :src => "helloworld.js"}
+    #hello
 
 
--#         <!DOCTYPE html>
+
+
+-# ----------------------
+-# <!DOCTYPE html>
 -# <html>
 -#   <head>
 -#     <meta charset="UTF-8" />
