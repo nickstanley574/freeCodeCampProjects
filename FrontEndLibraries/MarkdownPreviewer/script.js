@@ -38,8 +38,7 @@ const Preview = (props) => {
 
 
 const placeholder = 
-`
-# Place Holder Markdown 
+`# Place Holder Markdown 
 ## Hello World
 ### World Hello
 #### Hello World
@@ -102,11 +101,10 @@ class App extends React.Component{
     render() {
         return (
             <div>
-                <h3>Markdown Previewer</h3>
                 <div className='editorWrap'>
-                    <Toolbar text="Editor"/>
-                    <Editor markdown={this.state.markdown}
-                      onChange={this.handleChange}/>  
+                  <Toolbar text="Editor"/>
+                  <Editor markdown={this.state.markdown}
+                    onChange={this.handleChange}/>  
                 </div>
                 <div className='previewWrap'>
                   <Toolbar text="Previewer"/>

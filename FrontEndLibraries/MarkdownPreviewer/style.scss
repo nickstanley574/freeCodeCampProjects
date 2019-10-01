@@ -1,9 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+$backgroundBase: rebeccapurple;
+
+
 html,
 body {
-    background: gainsboro;
+    background: $backgroundBase;
+  }
+
+#preview,
+  .title {
+    display: inline-block;
   }
 
 .toolbar {
+  background-color: darken($backgroundBase, 22%);
+  color: whitesmoke;
+  font-size: 24px;
+  font-family: 'Pacifico', cursive;
   position: relative;
-  background-color: yellow;
+  height: 40px;
+}
+
+.editorWrap {
+  width: 850px;
+  margin: 18px auto;
+  .toolbar {
+    width: 98.5%;
+    padding-left: 5px; 
+  }
+  textarea {
+    width: 98.9%;
+    min-height: 400px;
+    outline: none;
+    resize: vertical;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 11px;
+  }
+}
+
+.previewWrap {
+  width: 1000px;
+  margin: 20px auto;
+  padding-right: 20px;
+  min-height: 200px;
+  overflow-wrap: break-word;
+  background: #BDAEC6;
+
+  .toolbar {
+    width: 100%;
+    padding-left: 10px; 
+    padding-right: 11px;
+  }
+
+  #preview {
+    margin-left: 5px;
+    margin-top: -10px;
+    width: 100%;
+  }
+}
+
+
+
+
+#preview {
+  blockquote {
+    border-left: 3px solid #224B4B;
+    color: #224B4B;
+    padding-left: 5px;
+    margin-left: 25px;
+  }
+
+  pre {
+    background: black;
+    padding: 5px 0 5px 5px;
+  }
+
+  code {
+    background: black;
+    color: greenyellow;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
 }
