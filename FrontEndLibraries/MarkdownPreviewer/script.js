@@ -40,7 +40,50 @@ const Preview = (props) => {
 const placeholder = 
 `
 # Place Holder Markdown 
-### Hello World
+## Hello World
+### World Hello
+#### Hello World
+
+1. train
+2. planes
+3. automobiles
+
+\`\`\`
+// this is multi-line code:
+
+    oooOOOOOOOOOOO"
+    o   ____           :::::::::::::::::: __|-----|__
+    Y_,_|[]| --++++++  |[][][][][][][][]| |  [] []  |
+    {|_|_|__|;|______|;|________________|;|_________|;
+    /oo--OO   oo  oo   oo oo      oo oo    oo     oo
+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+                     __|__
+            __|__ *---o0o---*
+   __|__ *---o0o---*
+*---o0o---*
+
+        _______
+       //  ||\\ \\
+ _____//___||_\\ \\___
+ )  _          _    \\
+ |_/ \\________/ \\___|
+___\\_/________\\_/______     
+
+
+\`\`\`
+
+**Inline code:** \`man curl\`
+
+
+
+![ship](https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/ship.png)
+
+[@nickstanley574](https://www.freecodecamp.org/nickstanley574)
+
+	
+> We'd have more luck playing pick-up sticks with our butt-cheeks than we will getting a flight out of here before daybreak.
+
 `
 
 class App extends React.Component{
@@ -62,7 +105,8 @@ class App extends React.Component{
                 <h3>Markdown Previewer</h3>
                 <div className='editorWrap'>
                     <Toolbar text="Editor"/>
-                    <Editor markdown={this.state.markdown}/>  
+                    <Editor markdown={this.state.markdown}
+                      onChange={this.handleChange}/>  
                 </div>
                 <div className='previewWrap'>
                   <Toolbar text="Previewer"/>
