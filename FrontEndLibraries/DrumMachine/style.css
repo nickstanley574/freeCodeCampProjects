@@ -1,0 +1,26 @@
+body {
+    background-color: #D7CEC7;
+}
+
+#display {
+    background-color: orange;
+}
+
+.pad-bank {
+    background-color: green;
+    width: 332px;
+    height: 272px; 
+}
+
+.drum-pad {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background-color: gray;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    float: left;
+}
