@@ -81,12 +81,9 @@ class DrumPad extends React.Component {
     }
 
     playsound = () => {
-        console.log(this.props)
-        console.log("playsound()")
         const audio = document.getElementById(this.state.keyTrigger);
         audio.play();
-        this.props.myCallback(this.state.id);
-
+        this.props.displayClipNameCallback(this.state.id);
     }
 
     render() {
@@ -111,20 +108,16 @@ class PadBank extends React.Component {
 
     render() {
         return (
-            <div>
                 <div className="pad-bank" >
-                    <DrumPad clipId="0" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="1" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="2" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="3" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="4" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="5" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="6" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="7" myCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="8" myCallback={this.props.displayClipNameCallback}/>
-
-                </div>
-
+                    <DrumPad clipId="0" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="1" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="2" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="3" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="4" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="5" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="6" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="7" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="8" displayClipNameCallback={this.props.displayClipNameCallback}/>
             </div>
         )
     }
@@ -142,7 +135,6 @@ class App extends React.Component {
     }
 
     displayClipNameCallback = (value) => {
-        console.log(value)
         this.setState({
             display: value
         })
