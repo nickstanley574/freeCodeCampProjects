@@ -36,19 +36,19 @@ const soundbank1 = [
         keyTrigger: 'D',
         id: 'Open-HH',
         url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
-    }, 
+    },
     {
         keyCode: 90,
         keyTrigger: 'Z',
         id: "Kick-n'-Hat",
         url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
-    }, 
+    },
     {
         keyCode: 88,
         keyTrigger: 'X',
         id: 'Kick',
         url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
-    }, 
+    },
     {
         keyCode: 67,
         keyTrigger: 'C',
@@ -74,24 +74,29 @@ class DrumPad extends React.Component {
         document.addEventListener('keydown', this.handleKeyPress);
     }
 
-    handleKeyPress(e) {
-        if (e.keyCode === this.state.keyCode) {
+    handleKeyPress(event) {
+        if (event.keyCode === this.state.keyCode) {
             this.playsound();
         }
     }
 
-    playsound() {
-        const i = this.props.clipId;
-        const audio = new Audio(this.state.url)
-        audio.play()
+    playsound = () => {
+        console.log(this.props)
+        console.log("playsound()")
+        const audio = document.getElementById(this.state.keyTrigger);
+        audio.play();
+        this.props.myCallback(this.state.id);
+
     }
 
     render() {
+        console.log(this.props)
         return (
             <div className="drum-pad"
                 id={this.state.id}
                 onClick={this.playsound}
                 onKeyPress={this.playsound}>
+                <audio className='clip' id={this.state.keyTrigger} src={this.state.url}></audio>
                 {this.state.keyTrigger}
             </div>
         )
@@ -103,18 +108,23 @@ class PadBank extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
-            <div className="pad-bank" >
-                <DrumPad clipId="0" />
-                <DrumPad clipId="1" />
-                <DrumPad clipId="2" />
-                <DrumPad clipId="3" />
-                <DrumPad clipId="4" />
-                <DrumPad clipId="5" />
-                <DrumPad clipId="6" />
-                <DrumPad clipId="7" />
-                <DrumPad clipId="8" />
+            <div>
+                <div className="pad-bank" >
+                    <DrumPad clipId="0" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="1" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="2" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="3" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="4" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="5" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="6" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="7" myCallback={this.props.displayClipNameCallback}/>
+                    <DrumPad clipId="8" myCallback={this.props.displayClipNameCallback}/>
+
+                </div>
+
             </div>
         )
     }
@@ -125,14 +135,17 @@ class PadBank extends React.Component {
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.playsound = this.playsound.bind(this);
-
+        this.state = {
+            display: "start1",
+        };
+        this.displayClipNameCallback = this.displayClipNameCallback.bind(this);
     }
 
-    playsound() {
-        console.log("App playsound()")
-        const audio = new Audio(button1[1].url)
-        audio.play()
+    displayClipNameCallback = (value) => {
+        console.log(value)
+        this.setState({
+            display: value
+        })
     }
 
     render() {
@@ -140,7 +153,8 @@ class App extends React.Component {
             <div id="drum-machine">
                 <div id="display">
                     <h1>Drum Machine</h1>
-                    <PadBank />
+                    <PadBank displayClipNameCallback={this.displayClipNameCallback}/>
+                    <p id="active">{this.state.display}</p>
                 </div>
             </div>
         )
