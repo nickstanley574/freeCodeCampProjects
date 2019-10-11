@@ -109,15 +109,21 @@ class PadBank extends React.Component {
     render() {
         return (
                 <div className="pad-bank" >
-                    <DrumPad clipId="0" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="1" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="2" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="3" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="4" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="5" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="6" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="7" displayClipNameCallback={this.props.displayClipNameCallback}/>
-                    <DrumPad clipId="8" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    <div class="row">
+                        <DrumPad clipId="0" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                        <DrumPad clipId="1" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                        <DrumPad clipId="2" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    </div>
+                    <div class="row">
+                        <DrumPad clipId="3" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                        <DrumPad clipId="4" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                        <DrumPad clipId="5" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    </div>
+                    <div class="row">
+                        <DrumPad clipId="6" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                        <DrumPad clipId="7" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                        <DrumPad clipId="8" displayClipNameCallback={this.props.displayClipNameCallback}/>
+                    </div>
             </div>
         )
     }
