@@ -1,0 +1,55 @@
+body {
+    background-color: #42a5f5;
+}
+
+#display {
+    background-color: #42a5f5;
+}
+
+.pad-bank {
+    background-color: white;
+    width: 500px;
+    padding: 20px;
+    margin: 30px auto;
+    height: 420px;
+    text-align: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 25px;
+}
+
+#active,
+#title {
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  width: 500px;
+  margin: 30px auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  font-size: 1.5rem;
+}
+
+.row {
+    margin: 0 auto;
+    width: 100%;
+    clear: both;
+    text-align: center;
+    font-family: 'Exo';
+  }
+
+
+.drum-pad,
+.dig {
+  float: left;
+  padding: 10% 11.6%;
+  width: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+  .drum-pad:hover {
+    background-color: grey;
+  }
