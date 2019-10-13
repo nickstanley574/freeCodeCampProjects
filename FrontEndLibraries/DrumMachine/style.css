@@ -36,11 +36,12 @@ body {
   width: 50px;
   font-size: 2rem;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.sub {
-    padding-top: 2px;;
-    font-size: 0.7rem;
-    color: grey;
-    width: 120%;
+  .drum-pad:hover {
+    background-color: grey;
   }
