@@ -150,7 +150,7 @@ class App extends React.Component {
         return (
             <div id="drum-machine">
                 <div id="display">
-                    <h1>Drum Machine</h1>
+                    <h1 id="title">Drum Machine</h1>
                     <PadBank displayClipNameCallback={this.displayClipNameCallback}/>
                     <p id="active">{this.state.display}</p>
                 </div>
