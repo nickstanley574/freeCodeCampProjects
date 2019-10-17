@@ -1,11 +1,6 @@
 
 const projectName = 'javascript-calculator';
 
-const   endsWithNegativeSign =/‑$/,
-        isOperator = /[*/+-]/
-
-
-
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -22,9 +17,6 @@ class App extends React.Component {
 
     displayOperator = (e) => {
         var result = this.state.display
-
-        console.log(result)
-        console.log(/^(.*?)[*/+-][*/+-]$/.test(result))
 
         if (/^(.*?)[*/+-][*/+-]$/.test(result)) {
             result = result.substring(0, result.length - 2);
@@ -99,30 +91,41 @@ class App extends React.Component {
 
     render () {
         return (
-            <div>
+            <div id="calculator">
                 <div id="display">
                     {this.state.display}
                 </div>
-                <button id="clear" onClick={this.displayClear}>AC</button>
+                <button id="clear" className="largeButton" onClick={this.displayClear}>AC</button>
+                <button id="divide"   className="operator" value='/' onClick={e => this.displayOperator(e, "value")}>/</button>
+                <button id="multiply" className="operator" value='*' onClick={e => this.displayOperator(e, "value")}>*</button>
+                <div>
+                    <button id="one"   value='1' onClick={e => this.displayNumber(e, "value")}>1</button>
+                    <button id="two"   value='2' onClick={e => this.displayNumber(e, "value")}>2</button>
+                    <button id="three" value='3' onClick={e => this.displayNumber(e, "value")}>3</button>
+                    <button id="add"   className="operator" value='+' onClick={e => this.displayOperator(e, "value")}>+</button>
+                </div>
 
-                <button id="zero"  value='0' onClick={e => this.displayNumber(e, "value")}>0</button>
-                <button id="one"   value='1' onClick={e => this.displayNumber(e, "value")}>1</button>
-                <button id="two"   value='2' onClick={e => this.displayNumber(e, "value")}>2</button>
-                <button id="three" value='3' onClick={e => this.displayNumber(e, "value")}>3</button>
-                <button id="four"  value='4' onClick={e => this.displayNumber(e, "value")}>4</button>
-                <button id="five"  value='5' onClick={e => this.displayNumber(e, "value")}>5</button>
-                <button id="six"   value='6' onClick={e => this.displayNumber(e, "value")}>6</button>
-                <button id="seven" value='7' onClick={e => this.displayNumber(e, "value")}>7</button>
-                <button id="eight" value='8' onClick={e => this.displayNumber(e, "value")}>8</button>
-                <button id="nine"  value='9' onClick={e => this.displayNumber(e, "value")}>9</button>
+                <div>
+                    <button id="four"  value='4' onClick={e => this.displayNumber(e, "value")}>4</button>
+                    <button id="five"  value='5' onClick={e => this.displayNumber(e, "value")}>5</button>
+                    <button id="six"   value='6' onClick={e => this.displayNumber(e, "value")}>6</button>
+                    <button id="subtract" className="operator" value='-' onClick={e => this.displayOperator(e, "value")}>-</button>
+                </div>
 
-                <button id="add"      value='+' onClick={e => this.displayOperator(e, "value")}>+</button>
-                <button id="subtract" value='-' onClick={e => this.displayOperator(e, "value")}>-</button>
-                <button id="multiply" value='*' onClick={e => this.displayOperator(e, "value")}>*</button>
-                <button id="divide"   value='/' onClick={e => this.displayOperator(e, "value")}>/</button>
+                <div>
+                    <button id="seven" value='7' onClick={e => this.displayNumber(e, "value")}>7</button>
+                    <button id="eight" value='8' onClick={e => this.displayNumber(e, "value")}>8</button>
+                    <button id="nine"  value='9' onClick={e => this.displayNumber(e, "value")}>9</button>
 
-                <button id="decimal"  onClick={this.displayDecimal}>.</button>
+                </div>
+
+                <div>
+                    <button id="zero"  className="largeButton" value='0' onClick={e => this.displayNumber(e, "value")}>0</button>
+                    <button id="decimal"  onClick={this.displayDecimal}>.</button>
+                </div>
+
                 <button id="equals"   onClick={this.evaluateExpression}>=</button>
+
             </div>
         );
     }

@@ -1,13 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
 #app {
-    background: grey;
-    height: 100vh;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 120px;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 body {
-    background: lightblue;
+    background: blanchedalmond;
+}
+
+
+#display {
+    background: black;
+    color: greenyellow;
+    height: 40px;
+    margin: 2px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 2px;
+
+}
+
+button {
+    position: relative;
+    border: none;
+    width: 80px;
+    height: 70px;
+    margin: 2px;
+    font-size: 20px;
+    background:#4d4d4d;
+    color: white;
+    &:hover {
+        color: black;
+        outline: .15em solid black;
+        font-size: 23px;
+    }
+}
+
+.operator {
+    background: grey;
+}
+
+.largeButton {
+    width: 164px;
+}
+
+#clear {
+    background: darkred;
+}
+
+#equals {
+    background: blue;
+    height: 144px;
+    bottom: 148px;
+    left: 252px;
 }
