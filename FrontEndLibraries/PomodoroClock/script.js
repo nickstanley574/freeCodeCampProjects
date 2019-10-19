@@ -132,51 +132,67 @@ class App extends React.Component {
                     Break Length
                 </div>
 
-                <div id="break-length">
-                    {this.state.breaklength}
+  
+                <div className="controls">
+
+                    <button id="break-decrement" onClick={this.breakDecrement}>
+                        <i class="fa fa-caret-down fa-3x" aria-hidden="true"></i>
+                    </button>
+
+                    <div id="break-length">
+                        {this.state.breaklength}
+                    </div>
+
+                    <button id="break-increment" onClick={this.breakIncrement}>
+                        <i class="fa fa-caret-up fa-3x" aria-hidden="true"></i>
+                    </button>
+
                 </div>
-
-                <button id="break-decrement" onClick={this.breakDecrement}>
-                    break decrement
-                </button>
-
-                <button id="break-increment" onClick={this.breakIncrement}>
-                    break increment
-                </button>
 
                 <div id="session-label">
                     Session Length
                 </div>
+                <div className="controls">
 
-                <div id="session-length">
-                    {this.state.sessionlength}
+                    <button id="session-decrement" onClick={this.sessionDecrement}>
+                        <i className="fa fa-caret-down fa-3x" aria-hidden="true"></i>
+                    </button>
+
+                    <div id="session-length">
+                        {this.state.sessionlength}
+                    </div>
+
+                    <button id="session-increment" onClick={this.sessionIncrement}>
+                        <i className="fa fa-caret-up fa-3x" aria-hidden="true"></i>
+                    </button>
 
                 </div>
 
-                <button id="session-decrement" onClick={this.sessionDecrement}>
-                    session decrement
+
+            </div>
+
+            <div id="timer">
+
+                <div id="timer-label">
+                    {this.state.type}
+                </div>
+
+                <div id="time-left">
+                    {min < 10 ? `0${min}` : min}:{sec < 10 ? `0${sec}` : sec}
+                </div>
+
+                <button id="start_stop" onClick={this.running}>
+                    {this.state.running ?
+                        <i class="fa fa-pause-circle fa-3x" aria-hidden="true"></i>
+                        :
+                        <i class="fa fa-play-circle-o fa-3x" aria-hidden="true"></i>
+                    }
                 </button>
-
-                <button id="session-increment" onClick={this.sessionIncrement}>
-                    session increment
-                </button>
-
             </div>
 
-            <div id="timer-label">
-                {this.state.type}
-            </div>
-
-            <div id="time-left">
-                {min < 10 ? `0${min}` : min}:{sec < 10 ? `0${sec}` : sec}
-            </div>
-
-            <button id="start_stop" onClick={this.running}>
-                start/stop
-            </button>
 
             <button id="reset" onClick={this.reset}>
-                reset
+                <i class="fa fa-repeat fa-2x" aria-hidden="true"></i>
             </button>
 
             <audio id="beep" preload="auto"
