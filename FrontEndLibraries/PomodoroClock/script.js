@@ -98,6 +98,7 @@ class App extends React.Component {
 
     reset = () => {
         this.setState(defaultState);
+        clearInterval(this.myInterval);
     }
 
     running = () => {
@@ -105,6 +106,8 @@ class App extends React.Component {
         if (this.state.running){
             isRunning = false
         }
+
+        this.componentDidMount();
 
         this.setState({
             running:isRunning
