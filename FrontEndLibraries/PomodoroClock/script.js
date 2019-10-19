@@ -17,7 +17,7 @@ class App extends React.Component {
     }
 
 
-    componentDidMount() {
+    countdown() {
 
         this.myInterval = setInterval(() => {
             if (this.state.running) {
@@ -51,6 +51,8 @@ class App extends React.Component {
             type = "Break"
             min  = this.state.breaklength
         }
+
+        this.audioBeep.play();
 
         this.setState({
             min: min,
@@ -98,6 +100,8 @@ class App extends React.Component {
 
     reset = () => {
         this.setState(defaultState);
+        this.audioBeep.pause();
+        this.audioBeep.currentTime = 0;
         clearInterval(this.myInterval);
     }
 
@@ -107,7 +111,7 @@ class App extends React.Component {
             isRunning = false
         }
 
-        this.componentDidMount();
+        this.countdown();
 
         this.setState({
             running:isRunning
@@ -175,7 +179,10 @@ class App extends React.Component {
                 reset
             </button>
 
-        </div>
+            <audio id="beep" preload="auto"
+                src="https://goo.gl/65cBl1"
+                ref={(audio) => { this.audioBeep = audio; }} />
+            </div>
         );
     }
 }
