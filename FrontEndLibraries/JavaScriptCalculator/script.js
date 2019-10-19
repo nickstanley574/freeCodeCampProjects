@@ -234,7 +234,7 @@ class App extends React.Component {
             >
             .
           </button>
-          
+
         </div>
 
         {/* Special equals positioning */}
