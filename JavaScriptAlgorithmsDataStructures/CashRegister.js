@@ -86,8 +86,6 @@ function checkCashRegister(price, cash, cid) {
     }
 
     let change_to_customer = []
-
-
     let status = ""
 
     if (change != 0) {
@@ -105,9 +103,106 @@ function checkCashRegister(price, cash, cid) {
         }
     }
 
-
     return {
         "status": status,
         "change": change_to_customer
     };
 }
+
+
+function check(input0, input1, input2, expect) {
+    let result = JSON.stringify((checkCashRegister(input0, input1, input2)))
+    expect = JSON.stringify(expect)
+    input2 = JSON.stringify(input2)
+    console.log((expect === result) ? "\u2713" : "x", `"${input0}, ${input1}, ${input2}" should return ${expect}.`)
+
+}
+
+check(19.5, 20, [
+    ["PENNY", 1.01],
+    ["NICKEL", 2.05],
+    ["DIME", 3.1],
+    ["QUARTER", 4.25],
+    ["ONE", 90],
+    ["FIVE", 55],
+    ["TEN", 20],
+    ["TWENTY", 60],
+    ["ONE HUNDRED", 100]
+], {
+    status: "OPEN",
+    change: [
+        ["QUARTER", 0.5]
+    ]
+})
+
+check(3.26, 100, [
+    ["PENNY", 1.01],
+    ["NICKEL", 2.05],
+    ["DIME", 3.1],
+    ["QUARTER", 4.25],
+    ["ONE", 90],
+    ["FIVE", 55],
+    ["TEN", 20],
+    ["TWENTY", 60],
+    ["ONE HUNDRED", 100]
+], {
+    status: "OPEN",
+    change: [
+        ["TWENTY", 60],
+        ["TEN", 20],
+        ["FIVE", 15],
+        ["ONE", 1],
+        ["QUARTER", 0.5],
+        ["DIME", 0.2],
+        ["PENNY", 0.04]
+    ]
+})
+
+check(19.5, 20, [
+    ["PENNY", 0.01],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 0],
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0]
+], { status: "INSUFFICIENT_FUNDS", change: [] })
+
+check(19.5, 20, [
+    ["PENNY", 0.01],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 1],
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0]
+], { status: "INSUFFICIENT_FUNDS", change: [] })
+
+check(19.5, 20, [
+    ["PENNY", 0.5],
+    ["NICKEL", 0],
+    ["DIME", 0],
+    ["QUARTER", 0],
+    ["ONE", 0],
+    ["FIVE", 0],
+    ["TEN", 0],
+    ["TWENTY", 0],
+    ["ONE HUNDRED", 0]
+], {
+    status: "CLOSED",
+    change: [
+        ["PENNY", 0.5],
+        ["NICKEL", 0],
+        ["DIME", 0],
+        ["QUARTER", 0],
+        ["ONE", 0],
+        ["FIVE", 0],
+        ["TEN", 0],
+        ["TWENTY", 0],
+        ["ONE HUNDRED", 0]
+    ]
+})
