@@ -1,17 +1,28 @@
-body {
-    background: #555;
-}
-
 .main {
-    margin: auto;
-    background: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: steelblue;
 }
 
-.bar:hover {
-    fill: yellow;
+#title {
+    font-size: 26pt;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bar {
+    fill: steelblue;
 }
 
 .container {
-    text-align: center;
-    padding: 70px 0;
+    background-color: whitesmoke;
+}
+
+.visHolder {
+    padding: 10px;
+    box-shadow: 5px 5px 30px;
 }
