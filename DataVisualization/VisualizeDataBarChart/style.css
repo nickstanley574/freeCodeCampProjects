@@ -1,0 +1,17 @@
+body {
+    background: #555;
+}
+
+.main {
+    margin: auto;
+    background: white;
+}
+
+.bar:hover {
+    fill: yellow;
+}
+
+.container {
+    text-align: center;
+    padding: 70px 0;
+}
