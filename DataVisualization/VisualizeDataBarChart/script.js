@@ -1,5 +1,5 @@
-var width = 1250
-height = 600
+var width = 1000
+height = 700
 barWidth = width / 285;
 
 var div = d3.select(".visHolder").append("div")
@@ -7,15 +7,39 @@ var div = d3.select(".visHolder").append("div")
     .style("opacity", 0)
     .style("text-align", "center")
     .style("font-size", "15px")
+    .html("--");
 
-.html("--")
+
 
 var svgContainer = d3.select('.visHolder')
     .append('svg')
     .attr('width', width + 100)
-    .attr('height', height + 30)
+    .attr('height', height + 60)
+
+svgContainer.append("text")
+    .attr('x', -300)
+    .attr("y", 90)
+    .attr("transform", "rotate(-90)")
+    .html("Gross Domestic Product (Billion)");
 
 var url = "https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json";
+
+svgContainer.append('text')
+    .text(url)
+    .style("font-size", "12px")
+    .style("font-weight", "bold")
+    .attr('x', width / 2 - 50)
+    .attr('y', height + 55)
+    .on("click", function() { window.open(url); })
+    .attr('class', 'info')
+    .on("mouseover", function() {
+        d3.select(this).style("fill", "darkblue");
+    })
+    .on("mouseout", function() {
+        d3.select(this).style("fill", "black");
+
+    });
+
 d3.json(url, function(json) {
     data = json['data']
     var GDP_ARR = data.map((item) => item[1])
@@ -77,14 +101,14 @@ d3.json(url, function(json) {
                 var date = YRS_ARR[i].split('-')
                 var m = months[Number(date[1])]
                 var y = date[0]
-                return `${m} ${y} : $${GDP_ARR[i].toLocaleString('en')} Billion`
+                return `${m} ${y} : $${GDP_ARR[i].toLocaleString('en').split(".")[0]} Billion`
             })
             div.attr('data-date', YRS_ARR[i])
         })
         .on("mouseout", function(d) {
             d3.select(this).style("fill", barColor);
             div.transition()
-                .duration(500)
+                .duration(600)
                 .style("opacity", 0);
         });
 
