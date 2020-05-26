@@ -33,13 +33,15 @@ d3.json(url, function(data) {
     // X axis Year
     var x = d3.scaleLinear().domain([yrsMin - 1, yrsMax + 1]).range([0, width])
 
+    var tx = 80
+
     svgContainer.append("g")
         .call(d3.axisBottom()
             .scale(x)
             .tickFormat(d3.format("d")))
         .attr('id', 'x-axis')
         .style("font-size", "14px")
-        .attr('transform', `translate(50, ${height + 30})`);
+        .attr('transform', `translate(${tx}, ${height + 30})`);
 
 
     var TIME_ARR = data.map((i) => i['Time'])
@@ -53,7 +55,7 @@ d3.json(url, function(data) {
     svgContainer.append("g")
         .call(yAxis)
         .attr('id', 'y-axis')
-        .attr("transform", "translate(50,30)")
+        .attr("transform", `translate(${tx},30)`)
         .style("font-size", "14px")
 
 
@@ -71,16 +73,16 @@ d3.json(url, function(data) {
         .attr("data-xvalue", (d) => d.Year)
         .attr("data-yvalue", (d) => d.Time.toISOString())
         .style("fill", (d) => d.Doping == "" ? colors[0] : colors[1])
-        .attr("transform", "translate(50,30)")
+        .attr("transform", `translate(${tx},30)`)
         .on("mouseover", function(d) {
             d3.select(this).style("stroke", "black")
-            d3.select(this).style("stroke-width", 2) // set the stroke width
+            d3.select(this).style("stroke-width", 2.2) // set the stroke width
             d3.select(this).attr("r", 8)
             div.transition()
                 .duration(200)
                 .style("opacity", 1)
                 .attr("data-year", d.Year)
-            div.html((d.Name) + "<br/>" + d.Year)
+            div.html("Name:  " + (d.Name) + "<br/>" + "Year: " + d.Year + "<br/>" + d.Doping)
                 .style("left", (d3.event.pageX) + "px")
                 .style("top", (d3.event.pageY - 28) + "px");
         })
@@ -92,6 +94,14 @@ d3.json(url, function(data) {
                 .style("opacity", 0);
         });
 
+    svgContainer.append('text')
+        .text("Time in Minutes")
+        .attr('x', -360)
+        .attr('y', 14)
+        .style('font-size', 16)
+        .attr('transform', 'rotate(-90)')
+
+
     var legendContainer = svgContainer.append("g")
         .attr("id", "legend")
 
@@ -100,7 +110,7 @@ d3.json(url, function(data) {
         .enter()
         .append("g")
         .attr("class", "legend-label")
-        .attr("transform", (d, i) => `translate(50, ${(height / 1.5 - i * 30)} )`);
+        .attr("transform", (d, i) => `translate(${tx}, ${(height / 1.5 - i * 30)} )`);
 
     legend.append("rect")
         .attr("x", width)
