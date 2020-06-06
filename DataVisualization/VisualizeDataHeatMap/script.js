@@ -1,9 +1,9 @@
 // Base off: https://www.d3-graph-gallery.com/graph/heatmap_basic.html
 
 // set the dimensions and margins of the graph
-var margin = { top: 80, right: 80, bottom: 150, left: 80 },
-    width = 1250 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+var margin = { top: 20, right: 80, bottom: 150, left: 85 },
+    width = 1400 - margin.left - margin.right,
+    height = 750 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select(".visHolder")
@@ -21,26 +21,23 @@ var div = d3.select("body").append("div")
 
 
 url = 'https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/global-temperature.json'
-
-//Read the data
 d3.json(url, function(data) {
 
-    var yearsArr = []
-    var VariArr = []
-
+    var colors = ["#313695", "#4575B4", "#74ADD1", "#ABD9E9", "#E0F3F8", "#FFFFBF", "#FEE090", "#FDAE61", "#F46D43", "#D73027", "#A50026"]
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+    data.allYears = []
+    data.allVariances = []
     data.monthlyVariance.map((e) => {
         e.temperature = Math.round((data.baseTemperature + e.variance) * 100) / 100
         e.monthString = months[e.month - 1]
-        yearsArr.push(e.year)
-        VariArr.push(e.variance)
+        data.allYears.push(e.year)
+        data.allVariances.push(e.variance)
     })
 
-    var colors = ["#313695", "#4575B4", "#74ADD1", "#ABD9E9", "#E0F3F8", "#FFFFBF", "#FEE090", "#FDAE61", "#F46D43", "#D73027", "#A50026"]
 
     var colorScale = d3.scaleQuantile()
-        .domain([d3.min(VariArr), d3.max(VariArr)])
+        .domain([d3.min(data.allVariances), d3.max(data.allVariances)])
         .range(colors);
 
 
@@ -51,39 +48,38 @@ d3.json(url, function(data) {
 
     svg.append("g")
         .call(d3.axisLeft(y)
-            .tickFormat((d) => {
-                return months[d - 1];
-            }))
-        .attr("id", "y-axis");
+            .tickFormat((d) => months[d - 1])
+        )
+        .attr("id", "y-axis")
+        .style("font-size", "14px");
 
 
     // Build X scales and axis:
     var x = d3.scaleBand()
         .range([0, width])
-        .domain(yearsArr)
+        .domain(data.allYears)
     svg.append("g")
         .attr("id", "x-axis")
+        .style("font-size", "14px")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x)
             .tickValues(x.domain().filter((year) => year % 10 === 0))
         )
 
     svg.selectAll()
-        .data(data.monthlyVariance, function(d) { return d.year + ':' + d.month; })
+        .data(data.monthlyVariance, (d) => d.year + ':' + d.month)
         .enter()
         .append("rect")
         .attr('class', 'cell')
         .attr('data-month', (d) => d.month - 1)
         .attr('data-year', (d) => d.year)
         .attr('data-temp', (d) => d.variance)
-        .attr('data-temp', (d, i) => d.variance)
-        .attr("x", function(d) { return x(d.year) })
-        .attr("y", function(d) { return y(d.month) })
+        .attr('data-temp', (d) => d.variance)
+        .attr("x", (d) => x(d.year))
+        .attr("y", (d) => y(d.month))
         .attr("width", x.bandwidth() + 0.2)
         .attr("height", y.bandwidth() + 0.1)
-        .style("fill", function(d, i) {
-            return colorScale(d.variance)
-        })
+        .style("fill", (d) => colorScale(d.variance))
         .on("mouseover", function(d) {
             d3.select(this).style("stroke", "gray")
             d3.select(this).style("stroke-width", 2)
@@ -108,17 +104,16 @@ d3.json(url, function(data) {
         });
 
 
-
     var legendContainer = svg.append("g")
         .attr("id", "legend")
         .attr("x", 520)
 
 
-    var h = 525
-    var w = -500
+    var h = height + 50
+    var w = width * -1
     for (i in colors) {
 
-        var tempText = Math.round((data.baseTemperature + (colorScale.invertExtent(colors[i])[0])) * 10) / 10
+        var tempText = (data.baseTemperature + (colorScale.invertExtent(colors[i])[0])).toFixed(1);
 
         legendContainer.append("rect", ".tick")
             .attr("x", width)
@@ -126,13 +121,14 @@ d3.json(url, function(data) {
             .attr("height", 30)
             .style("fill", colors[i])
             .style("stroke", 'black')
-            .style("stroke-width", 1.5)
+            .style("stroke-width", 1)
             .attr("id", "legendColor")
             .attr("transform", `translate(${w} ,${h})`)
 
         legendContainer.append("text")
             .attr("x", width)
             .text(tempText)
+            .style("font-size", "14px")
             .attr("transform", `translate(${w} ,${h+50})`)
 
         w += 40
