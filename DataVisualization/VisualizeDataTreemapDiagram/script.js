@@ -43,7 +43,7 @@ color = d3.scaleOrdinal([
 
 var treemap = d3.treemap()
     .size([width, height])
-    .paddingInner(3);
+    .paddingInner(3.5);
 
 d3.json(FILE_PATH, function(error, data) {
 
@@ -72,7 +72,6 @@ d3.json(FILE_PATH, function(error, data) {
         .attr("height", (d) => d.y1 - d.y0)
         .attr("fill", (d) => color(d.data.category))
         .on("mousemove", function(d) {
-            console.log("mouseover");
             tooltip.style("opacity", .9);
             tooltip.html(
                     'Name: ' + d.data.name +
@@ -105,11 +104,11 @@ d3.json(FILE_PATH, function(error, data) {
     var legendWidth = +legend.attr("width");
 
     const LEGEND_OFFSET = 5;
-    const LEGEND_RECT_SIZE = 15;
+    const LEGEND_RECT_SIZE = 25;
     const LEGEND_H_SPACING = 150;
     const LEGEND_V_SPACING = 10;
-    const LEGEND_TEXT_X_OFFSET = 3;
-    const LEGEND_TEXT_Y_OFFSET = -2;
+    const LEGEND_TEXT_X_OFFSET = 10;
+    const LEGEND_TEXT_Y_OFFSET = -8;
 
     var legendElemsPerRow = Math.floor(legendWidth / LEGEND_H_SPACING);
 
@@ -129,6 +128,27 @@ d3.json(FILE_PATH, function(error, data) {
         .attr('class', 'legend-item')
         .attr('fill', function(d) {
             return color(d);
+        })
+        .on('mouseover', function(d, i) {
+            d3.select(this)
+                .transition().duration(300)
+                .attr("stroke", "black")
+                .attr("stroke-width", 1.8);
+
+            d3.selectAll(`[data-category="${d}"]`)
+                .transition().duration(300)
+                .attr("stroke", "black")
+                .attr("stroke-width", 1.8)
+        })
+        .on('mouseout', function(d, i) {
+            d3.select(this)
+                .transition().duration(300)
+                .attr("stroke-width", 0)
+
+            d3.selectAll(`[data-category="${d}"]`)
+                .transition().duration(300)
+                .attr("stroke-width", 0)
+
         })
 
     legendElem.append("text")
