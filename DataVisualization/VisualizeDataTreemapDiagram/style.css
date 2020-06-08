@@ -44,11 +44,10 @@ div.tooltip {
 }
 
 #legend {
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     display: block;
     margin: auto;
-    padding-bottom: 5px;
     margin-bottom: 2rem;
     margin-top: 1rem;
 }

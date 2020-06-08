@@ -12,6 +12,10 @@ var svg = d3.select("#tree-map"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
+var tooltip = body.append("div")
+    .attr("class", "tooltip")
+    .attr("id", "tooltip")
+    .style("opacity", 0);
 
 color = d3.scaleOrdinal([
     "#8dd3c7",
@@ -39,7 +43,7 @@ color = d3.scaleOrdinal([
 
 var treemap = d3.treemap()
     .size([width, height])
-    .paddingInner(8);
+    .paddingInner(3);
 
 d3.json(FILE_PATH, function(error, data) {
 
@@ -47,24 +51,88 @@ d3.json(FILE_PATH, function(error, data) {
 
     var root = d3.hierarchy(data)
         .sum((d) => d.value)
-        .sort((a, b) => b.value - a.value);
+        .sort((a, b) => b.height - a.height || b.value - a.value);
 
 
     treemap(root);
 
-    var cell = svg.selectAll("g")
+    var tile = svg.selectAll("g")
         .data(root.leaves())
         .enter().append("g")
         .attr("class", "group")
         .attr("transform", (d) => `translate(${d.x0},${d.y0})`);
 
-    cell.append("rect")
+    tile.append("rect")
         .attr("id", (d) => d.data.id)
+        .attr("data-name", (d) => d.data.name)
+        .attr("data-category", (d) => d.data.category)
+        .attr("data-value", (d) => d.data.value)
         .attr("class", "tile")
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
         .attr("fill", (d) => color(d.data.category))
+        .on("mousemove", function(d) {
+            console.log("mouseover");
+            tooltip.style("opacity", .9);
+            tooltip.html(
+                    'Name: ' + d.data.name +
+                    '<br>Category: ' + d.data.category +
+                    '<br>Value: ' + d.data.value
+                )
+                .attr("data-value", d.data.value)
+                .style("left", (d3.event.pageX + 10) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            tooltip.style("opacity", 0);
+        })
+    tile.append("text")
+        .attr('class', 'tile-text')
+        .selectAll("tspan")
+        .data(function(d) { return d.data.name.split(/(?=[A-Z][^A-Z])/g); })
+        .enter().append("tspan")
+        .attr("x", 2)
+        .attr("y", function(d, i) { return 13 + i * 10; })
+        .text(function(d) { return d; });
 
 
+    var categories = root.leaves()
+        .map((nodes) => nodes.data.category)
+        .filter((cat, i, self) => self.indexOf(cat) === i);
 
+
+    var legend = d3.select("#legend")
+    var legendWidth = +legend.attr("width");
+
+    const LEGEND_OFFSET = 5;
+    const LEGEND_RECT_SIZE = 15;
+    const LEGEND_H_SPACING = 150;
+    const LEGEND_V_SPACING = 10;
+    const LEGEND_TEXT_X_OFFSET = 3;
+    const LEGEND_TEXT_Y_OFFSET = -2;
+
+    var legendElemsPerRow = Math.floor(legendWidth / LEGEND_H_SPACING);
+
+    var legendElem = legend
+        .append("g")
+        .attr("transform", "translate(60," + LEGEND_OFFSET + ")")
+        .selectAll("g")
+        .data(categories)
+        .enter().append("g")
+        .attr("transform", function(d, i) {
+            return `translate(${((i % legendElemsPerRow) * LEGEND_H_SPACING)},${ ((Math.floor(i / legendElemsPerRow)) * LEGEND_RECT_SIZE + (LEGEND_V_SPACING * (Math.floor(i / legendElemsPerRow))))})`;
+        })
+
+    legendElem.append("rect")
+        .attr('width', LEGEND_RECT_SIZE)
+        .attr('height', LEGEND_RECT_SIZE)
+        .attr('class', 'legend-item')
+        .attr('fill', function(d) {
+            return color(d);
+        })
+
+    legendElem.append("text")
+        .attr('x', LEGEND_RECT_SIZE + LEGEND_TEXT_X_OFFSET)
+        .attr('y', LEGEND_RECT_SIZE + LEGEND_TEXT_Y_OFFSET)
+        .text(function(d) { return d; });
 });
