@@ -25,22 +25,22 @@ body {
 }
 
 #title {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 #description {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
-div.tooltip {
+#tooltip {
     position: absolute;
-    padding: 10px;
-    font: 12px Arial;
-    background: rgba(255, 255, 204, 0.95);
-    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
-    border: 0px;
-    border-radius: 2px;
     pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    text-align: center;
 }
 
 #legend {
@@ -50,4 +50,27 @@ div.tooltip {
     margin: auto;
     margin-bottom: 2rem;
     margin-top: 1rem;
+}
+
+#nav {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#nav span {
+    padding: 8px;
+    border-radius: 4px;
+    user-select: none;
+}
+
+#nav span:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 204, 0.95);
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+    color: black;
+}
+
+#nav span:active {
+    background-color: rgba(241, 241, 44, 0.719);
 }
