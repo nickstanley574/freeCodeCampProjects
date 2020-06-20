@@ -1,0 +1,19 @@
+{
+  "name": "fcc-api-timestamp",
+  "version": "1.0.0",
+  "description": "Build a full stack JavaScript app that is functionally similar to this: https://curse-arrow.glitch.me/.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "freecodecamp",
+    "express",
+    "timestamp"
+  ],
+  "author": "Nicholas Stanley",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
