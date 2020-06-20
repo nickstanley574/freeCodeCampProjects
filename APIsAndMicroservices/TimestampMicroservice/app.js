@@ -9,13 +9,18 @@ app.get('/', function(req, res) {
 
 
 app.get('/api/timestamp', function(rq, res) {
-    return res.status(200).send({ success: 'true' });
+    var date = new Date()
+
+    return res.status(200).send({
+        unix: date.getTime(),
+        utc: date.toUTCString()
+    });
 });
 
 
 // 404
 app.use(function(req, res, next) {
-    return res.status(404).send({ message: 'Route' + req.url + ' Not found.' });
+    return res.status(404).send({ message: 'Route ' + req.url + ' Not found.' });
 });
 
 
