@@ -1,1 +1,1 @@
-docker-compose up --build
+PORT=5000 ENV=local docker-compose up --build

@@ -24,9 +24,15 @@ app.get('/api/timestamp', function(req, res) {
 });
 
 app.get('/api/timestamp/:date', function(req, res) {
+    var dateString = req.params.date
 
 
-    var date = new Date(req.params.date)
+    if (/\d{5,}/.test(dateString)) {
+        var date = new Date(parseInt(dateString))
+    } else {
+        var date = new Date(dateString)
+
+    }
 
     if (date.toString() === "Invalid Date") {
         res.json({

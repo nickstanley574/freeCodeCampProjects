@@ -4,6 +4,6 @@ services:
     build: .
     container_name: web
     environment:
-    - PORT=4000
+    - PORT=${PORT}
     ports:
-      - "4000:4000"
+      - "${PORT}:${PORT}"
