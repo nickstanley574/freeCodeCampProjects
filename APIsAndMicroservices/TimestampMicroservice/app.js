@@ -8,13 +8,30 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/api/timestamp', function(rq, res) {
+app.get('/api/timestamp', function(req, res) {
     var date = new Date()
 
     return res.json({
         unix: date.getTime(),
         utc: date.toUTCString()
     });
+});
+
+app.get('/api/timestamp/:date', function(req, res) {
+
+
+    var date = new Date(req.params.date)
+
+    if (date.toString() === "Invalid Date") {
+        return res.json({
+            error: date.toString()
+        })
+    } else {
+        return res.json({
+            unix: date.getTime(),
+            utc: date.toUTCString()
+        });
+    }
 });
 
 
