@@ -14,39 +14,34 @@
         li {
             margin: 10px 0 20px 0;
         }
+        
+        .snippet {
+            list-style-type: none;
+        }
     </style>
 </head>
 
 <body>
     <h3>API Project: Timestamp Microservice for FCC - nickstanley574</h1>
-        <p>Github: <a href="https://github.com/nickstanley574/freeCodeCampProjects/tree/master/APIsAndMicroservices/TimestampMicroservice">nickstanley574/freeCodeCampProjects/APIsAndMicroservices/TimestampMicroservice</a></p>
-        <p>Free Code Camp Project: <a href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice">Timestamp Microservice</a></p>
+        <p>Github: <a href="https://github.com/nickstanley574/freeCodeCampProjects/tree/master/APIsAndMicroservices/TimestampMicroservice" target="_blank">nickstanley574/freeCodeCampProjects/APIsAndMicroservices/TimestampMicroservice</a></p>
+        <p>Free Code Camp Project: <a href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/timestamp-microservice" target="_blank">Timestamp Microservice</a></p>
 
 
         <h3>Example Usage:</h3>
         <ul>
-            <li><a href="api/timestamp">[project url]/api/timestamp</a>
-                <ul>
-                    <li> <code>{"unix":1592751088614,"utc":"Sun, 21 Jun 2020 14:51:28 GMT"}</code> </li>
-                </ul>
-            </li>
-            <li><a href="api/timestamp/2015-12-25">[project url]/api/timestamp/2015-12-25</a>
-                <ul>
-                    <li> <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code> </li>
-                </ul>
-            </li>
+            <li><a href="api/timestamp">[project url]/api/timestamp</a></li>
+            <li class="snippet"> <code>{"unix":1592751088614,"utc":"Sun, 21 Jun 2020 14:51:28 GMT"}</code> </li>
 
-            <li><a href="api/timestamp/1451001600000">[project url]/api/timestamp/1451001600000</a>
-                <ul>
-                    <li> <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code> </li>
-                </ul>
-            </li>
+            <li><a href="api/timestamp/2015-12-25">[project url]/api/timestamp/2015-12-25</a></li>
+            <li class="snippet"> <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code> </li>
 
-            <li><a href="api/timestamp/2015-13-25">[project url]/api/timestamp/2015-13-25</a>
-                <ul>
-                    <li> <code>{"error":"Invalid Date"}</code> </li>
-                </ul>
-            </li>
+            <li><a href="api/timestamp/1451001600000">[project url]/api/timestamp/1451001600000</a></li>
+            <li class="snippet"> <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code> </li>
+
+            <li><a href="api/timestamp/2015-13-25">[project url]/api/timestamp/2015-13-25</a></li>
+            <li class="snippet"> <code>{"error":"Invalid Date"}</code> </li>
+
+
         </ul>
 
 </body>
