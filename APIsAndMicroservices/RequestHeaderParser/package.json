@@ -1,0 +1,24 @@
+{
+    "name": "fcc-request-reader",
+    "version": "0.0.1",
+    "description": "API project for freeCodeCamp",
+    "main": "app.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "author": "Nicholas Stanley",
+    "dependencies": {
+        "express": "^4.17.1",
+        "cors": "^2.8.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "freecodecamp",
+        "request_header"
+    ],
+    "license": "MIT"
+}
