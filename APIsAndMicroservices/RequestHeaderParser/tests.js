@@ -17,3 +17,13 @@ function getJSON(url, callback) {
 }
 
 localUrl = `http://0.0.0.0:${port}`
+
+
+getJSON(localUrl + '/api/whoami', () => {
+    console.log("Your IP address should be returned in the <code>ipaddress</code> key.")
+    assert(data.ipaddress && data.ipaddress.length > 0)
+    console.log("Your preferred language should be returned in the <code>language</code> key.")
+    assert(data.language && data.language.length > 0)
+    console.log("Your software should be returned in the <code>software</code> key.")
+    assert(data.software && data.software.length > 0)
+});

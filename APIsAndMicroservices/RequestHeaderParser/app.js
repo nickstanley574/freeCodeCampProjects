@@ -12,6 +12,15 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+
+app.get('/api/whoami', function(req, res) {
+    res.json({
+        ipaddress: req.connection.remoteAddress,
+        language: req.headers["accept-language"],
+        software: req.headers["user-agent"]
+    });
+});
+
 // 404
 app.use(function(req, res, next) {
     return res.status(404).send({ message: 'Route ' + req.url + ' Not found.' });
