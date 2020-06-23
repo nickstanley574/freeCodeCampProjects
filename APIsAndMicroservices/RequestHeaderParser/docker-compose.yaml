@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: web
+    environment:
+    - PORT=${PORT}
+    ports:
+      - "${PORT}:${PORT}"
