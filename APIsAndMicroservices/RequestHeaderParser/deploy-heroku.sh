@@ -9,10 +9,10 @@ docker build .
 echo
 echo "=== Tests ==="
 echo
-PORT=6000 docker-compose down
-PORT=6000 docker-compose up -d
-node tests.js 6000
-PORT=6000 docker-compose down
+PORT=3001 docker-compose down
+PORT=3001 docker-compose up -d
+node tests.js 3001
+PORT=3001 docker-compose down
 echo
 echo "=== Push ==="
 echo

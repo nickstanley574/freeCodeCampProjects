@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
-    container_name: web
+    container_name: local-request-reader
     environment:
     - PORT=${PORT}
     ports:
