@@ -1,18 +1,17 @@
+const request = require('request');
+
 const express = require('express');
 const app = express();
 
-const router = express.Router();
-const dns = require('dns');
-
 const db = require("./db.js")
 
-var http = require('http')
 
 // index.html
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 url = require('url');
+
 
 // List all current Links
 app.get("/api/shorturl/all", function(req, res) {
@@ -22,9 +21,7 @@ app.get("/api/shorturl/all", function(req, res) {
         if (err) {
             res.status(400).json({ "error": err.message });
         } else {
-            res.json({
-                "data": rows
-            });
+            res.json({ "data": rows });
         }
     })
 });
@@ -33,13 +30,11 @@ app.get("/api/shorturl/all", function(req, res) {
 // redirect based on id
 app.get('/api/shorturl/:id', function(req, res) {
     let id = req.params.id;
-    console.log('Got id:', id);
     let sql = `SELECT original_url FROM shorturl WHERE id  = (?)`;
     db.get(sql, [id], (err, row) => {
         if (err) {
             return res.json({ error: err.message });
         }
-        console.log(row)
         return row ?
             res.redirect(row.original_url) :
             res.json({ error: `No url entry found for id ${id}` })
@@ -59,31 +54,23 @@ app.get('/api/shorturl/:id/data', function(req, res) {
 
 // Add url
 app.post('/api/shorturl/new/', function(req, res) {
-    var uri = req.query.url
+    var url = req.query.url
 
-    var host = url.parse(uri).host;
-
-
-
-    // Check if url is valid
-    dns.lookup(host, (err, address, family) => {
-        if (err) {
-            console.log(`${url} invalid URL.`)
-            res.json({
-                error: "invalid URL"
-            })
-        } else {
-            console.log('address: %j family: IPv%s', address, family);
+    request({ method: 'HEAD', uri: url }, function(error, response) {
+        if (!error && response.statusCode == 200) {
             var insert = 'INSERT INTO shorturl (original_url) VALUES (?)'
-            db.run(insert, uri, function(err) {
+            db.run(insert, url, function(err) {
                 console.log(`${url} has been inserted with rowid ${this.lastID}`);
                 res.json({
-                    "original_url": uri,
+                    "original_url": url,
                     "short_url": this.lastID
                 })
             })
+        } else {
+            console.log(`ERROR - ${url} invalid URL`)
+            res.json({ error: "invalid URL" })
         }
-    });
+    })
 })
 
 
