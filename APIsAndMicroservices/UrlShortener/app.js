@@ -10,7 +10,7 @@ const db = require("./db.js")
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
-url = require('url');
+// url = require('url');
 
 
 // List all current Links
@@ -26,6 +26,23 @@ app.get("/api/shorturl/all", function(req, res) {
     })
 });
 
+
+
+// Get the n most recent urls
+app.get("/api/shorturl/recent/:n", function(req, res) {
+    var sql = `SELECT * FROM shorturl WHERE [id] > (SELECT MAX([id]) - ${req.params.n} FROM [shorturl])  ORDER BY id DESC; `
+    var params = []
+    db.all(sql, params, function(err, rows) {
+        if (err) {
+            res.status(400).json({ "error": err.message });
+        } else {
+            res.json({
+                length: rows.length,
+                data: rows
+            });
+        }
+    })
+});
 
 // redirect based on id
 app.get('/api/shorturl/:id', function(req, res) {

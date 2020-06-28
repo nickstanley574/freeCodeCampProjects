@@ -4,8 +4,13 @@
 
 <head>
     <title>URL Shortener</title>
-    <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon" /> -->
     <style>
+        html,
+        body {
+            background-color: whitesmoke;
+        }
+        
         code {
             background-color: #eee;
             border: 1px solid #999;
@@ -24,23 +29,121 @@
         a {
             text-decoration: none
         }
+        
+        #mostRecent {
+            border: 1px solid #999;
+            margin-top: 25px;
+            padding: 5px;
+        }
+        
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            /* width: 100%; */
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
     </style>
 </head>
-console.log(window.location.hostname)
-<script>
-
-</script>
 
 <body>
     <div class="container">
         <h2>API Project: URL Shortener Microservice</h2>
 
-        <form action="api/shorturl/new" method="POST">
+        <form action="/api/shorturl/new" method="POST">
             <label for="url_input">URL to be shortened</label>
             <input id="url_input" type="text" name="url">
             <input type="submit" value="POST URL">
         </form>
     </div>
+    <h3>Example Usage:</h3>
+    <ul>
+        <li><a href="api/shorturl/all">[project url]/api/shorturl/all</a></li>
+
+        <li><a href="api/shorturl/recent/5">[project url]/api/shorturl/recent/:n</a></li>
+
+        <li><a href="api/shorturl/1/data">[project url]/api/shorturl/:id/data</a></li>
+    </ul>
+
+
+
+    <h3>7 Most Recent</h3>
+    <table id='tbl' border=1></table>
+</body>
+
+<script>
+    console.log("============ START ============")
+
+    var host = location.origin
+    const url = `${host}/api/shorturl/recent/5`;
+    console.log(url)
+    fetch(url)
+        .then(function(response) {
+            // The JSON data will arrive here
+            return response.json()
+        }).then(function(data) {
+            appendData(data.data);
+        })
+        .catch(function(err) {
+            console.log(err)
+
+            console.log("fail")
+                // If an error occured, you will catch it here
+        });
+
+    function appendData(data) {
+        console.log(data.length)
+            // var mainContainer = document.getElementById("myData");
+        for (var i = 0; i < data.length; i++) {
+            var div = document.createElement("div");
+            var tbl = document.getElementById('tbl');
+            var id = data[i].id
+            var original_url = data[i].original_url
+            var end = ""
+            if (original_url.length >= 90) {
+                end = "...  (truncated)"
+            }
+            addRow(tbl, id, original_url.substring(0, 90) + end);
+        }
+    }
+
+    function addCell(tr, val) {
+        var td = document.createElement('td');
+        td.innerHTML = val;
+        tr.appendChild(td)
+    }
+
+    function addRow(tbl, val_1, val_2) {
+        var tr = document.createElement('tr');
+        addCell(tr, val_1);
+        addCell(tr, val_2);
+        tbl.appendChild(tr)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    console.log("============ END ============")
+</script>
+
 </body>
 
 </html>
