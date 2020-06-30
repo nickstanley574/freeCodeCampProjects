@@ -34,3 +34,43 @@ function getJSON(url, callback) {
 //     "text": "When I visit that shortened URL, it will redirect me to my original link.",
 //     "testString": ""
 // }
+
+localUrl = `http://0.0.0.0:${port}`
+
+
+getJSON(`${localUrl}/api/shorturl/new`, function(data, url) {
+    console.log(url)
+    console.log("I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.")
+    request.post(
+        url, { json: { url: 'https://www.freecodecamp.org/learn/' } },
+        function(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(body);
+            } else {
+                console.log("error")
+            }
+        }
+    );
+});
+
+
+getJSON(`${localUrl}/api/shorturl/new`, function(data, url) {
+    console.log(url)
+    console.log("If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.")
+    request.post(
+        url, { json: { url: 'https://fackdomain123abc.com' } },
+        function(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                assert.equal(JSON.stringify(body), JSON.stringify({ "error": "invalid URL" }))
+            } else {
+                console.log("ERROR!")
+            }
+        }
+    );
+});
+
+
+getJSON(`${localUrl}/api/shorturl/new`, function(data, url) {
+    console.log(url)
+    console.log("When I visit that shortened URL, it will redirect me to my original link.")
+});
