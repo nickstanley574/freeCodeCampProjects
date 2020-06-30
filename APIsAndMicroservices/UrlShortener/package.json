@@ -1,24 +1,28 @@
 {
-    "name": "fcc-api-url-shortener",
-    "version": "1.0.0",
-    "description": ".",
-    "main": "app.js",
-    "keywords": [
-        "freecodecamp",
-        "express",
-        "urlShortener"
-    ],
-    "author": "Nicholas Stanley",
-    "license": "MIT",
-    "dependencies": {
-        "cors": "^2.8.0",
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.4"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com:nickstanley574/freeCodeCampProjects.git"
-    }
+  "name": "fcc-api-url-shortener",
+  "version": "1.0.0",
+  "description": ".",
+  "main": "app.js",
+  "keywords": [
+    "freecodecamp",
+    "express",
+    "urlShortener"
+  ],
+  "scripts": {
+    "local": "./node_modules/.bin/nodemon app.js"
+  },
+  "author": "Nicholas Stanley",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:nickstanley574/freeCodeCampProjects.git"
+  }
 }

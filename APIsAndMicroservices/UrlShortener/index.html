@@ -4,11 +4,13 @@
 
 <head>
     <title>URL Shortener</title>
+    <meta http-equiv="cache-control" content="no-cache" />
     <!-- <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon" /> -->
     <style>
         html,
         body {
             background-color: whitesmoke;
+            padding-left: 5px;
         }
         
         code {
@@ -19,7 +21,7 @@
         }
         
         li {
-            margin: 10px 0 20px 0;
+            margin: 5px 0 12px 0;
         }
         
         .snippet {
@@ -44,27 +46,37 @@
         
         td,
         th {
-            border: 1px solid #dddddd;
+            border: 1px solid gray;
             text-align: left;
-            padding: 8px;
+            padding: 10px;
+            font-size: small;
         }
         
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+        
+        #shortened_url_form {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h2>API Project: URL Shortener Microservice</h2>
+    <h2>API Project: URL Shortener Microservice</h2>
 
+    <p>Github: <a href="https://github.com/nickstanley574/freeCodeCampProjects/tree/master/APIsAndMicroservices/UrlShortener" target="_blank">nickstanley574/freeCodeCampProjects/APIsAndMicroservices/UrlShortener</a></p>
+    <p>Free Code Camp Project: <a href="https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/url-shortener-microservice" target="_blank">URL Shortener Microservice</a></p>
+
+    <div id="shortened_url_form">
         <form action="/api/shorturl/new" method="POST">
-            <label for="url_input">URL to be shortened</label>
-            <input id="url_input" type="text" name="url">
+            <label for="url_input">URL to be shortened</label><br>
+            <input id="url_input" type="text" name="url" style="width: 750px; margin-top: 5px; margin-bottom: 5px;"><br>
             <input type="submit" value="POST URL">
         </form>
     </div>
+
     <h3>Example Usage:</h3>
     <ul>
         <li><a href="api/shorturl/all">[project url]/api/shorturl/all</a></li>
@@ -72,6 +84,8 @@
         <li><a href="api/shorturl/recent/5">[project url]/api/shorturl/recent/:n</a></li>
 
         <li><a href="api/shorturl/1/data">[project url]/api/shorturl/:id/data</a></li>
+
+        <li><a href="/api/shorturl/1">[project url]/api/shorturl/:id</a></li>
     </ul>
 
 
@@ -81,11 +95,7 @@
 </body>
 
 <script>
-    console.log("============ START ============")
-
-    var host = location.origin
-    const url = `${host}/api/shorturl/recent/5`;
-    console.log(url)
+    const url = `${location.origin}/api/shorturl/recent/7`;
     fetch(url)
         .then(function(response) {
             // The JSON data will arrive here
@@ -95,9 +105,6 @@
         })
         .catch(function(err) {
             console.log(err)
-
-            console.log("fail")
-                // If an error occured, you will catch it here
         });
 
     function appendData(data) {
@@ -112,7 +119,7 @@
             if (original_url.length >= 90) {
                 end = "...  (truncated)"
             }
-            addRow(tbl, id, original_url.substring(0, 90) + end);
+            addRow(tbl, id, original_url, original_url.substring(0, 90) + end);
         }
     }
 
@@ -122,26 +129,12 @@
         tr.appendChild(td)
     }
 
-    function addRow(tbl, val_1, val_2) {
+    function addRow(tbl, id, url, display_url) {
         var tr = document.createElement('tr');
-        addCell(tr, val_1);
-        addCell(tr, val_2);
+        addCell(tr, id);
+        addCell(tr, `<a href="${url}" target="_blank">${display_url} </a>`);
         tbl.appendChild(tr)
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    console.log("============ END ============")
 </script>
 
 </body>

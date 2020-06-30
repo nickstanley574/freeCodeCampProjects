@@ -1,6 +1,14 @@
 const sqlite3 = require('sqlite3').verbose()
 
-const DBSOURCE = "db.sqlite"
+
+var sqlite_file = "db.sqlite"
+
+if (process.env.NODE_ENV === 'test') {
+    sqlite_file = "temp.sqlite"
+}
+const DBSOURCE = sqlite_file
+console.log(`Using DBSOURCE ${DBSOURCE}`)
+
 
 let db = new sqlite3.Database(DBSOURCE, (err) => {
     if (err) {

@@ -5,6 +5,11 @@ const app = express();
 
 const db = require("./db.js")
 
+var bodyParser = require('body-parser')
+app.use(bodyParser.json()); // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
+    extended: true
+}));
 
 // index.html
 app.get('/', function(req, res) {
@@ -71,7 +76,7 @@ app.get('/api/shorturl/:id/data', function(req, res) {
 
 // Add url
 app.post('/api/shorturl/new/', function(req, res) {
-    var url = req.query.url
+    var url = req.body.url
 
     request({ method: 'HEAD', uri: url }, function(error, response) {
         if (!error && response.statusCode == 200) {
