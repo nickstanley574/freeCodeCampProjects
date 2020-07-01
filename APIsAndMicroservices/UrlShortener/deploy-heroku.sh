@@ -14,15 +14,15 @@ export NODE_ENV=test
 docker-compose down
 docker-compose up -d
 node tests.js $PORT
-#docker-compose down
+docker-compose down
 echo
-# echo "=== Push ==="
-# echo
-# heroku container:push web --app fcc-timestamp-ns574
-# sleep 2
-# echo
-# echo "=== Release ==="
-# echo
-# heroku container:release web --app fcc-timestamp-ns574
+echo "=== Push ==="
+echo
+heroku container:push web --app fcc-urlshortener-ns574
+sleep 2
+echo
+echo "=== Release ==="
+echo
+heroku container:release web --app fcc-urlshortener-ns574
 echo
 echo "Done."

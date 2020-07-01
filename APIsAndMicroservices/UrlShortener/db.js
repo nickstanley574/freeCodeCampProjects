@@ -4,9 +4,9 @@ const sqlite3 = require('sqlite3').verbose()
 var sqlite_file = "db.sqlite"
 
 if (process.env.NODE_ENV === 'test') {
-    sqlite_file = "temp.sqlite"
+    sqlite_file = './.db/temp.sqlite'
 }
-const DBSOURCE = './.db/' + sqlite_file
+const DBSOURCE = sqlite_file
 console.log(`Using DBSOURCE ${DBSOURCE}`)
 
 
