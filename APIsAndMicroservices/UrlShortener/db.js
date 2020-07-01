@@ -6,7 +6,7 @@ var sqlite_file = "db.sqlite"
 if (process.env.NODE_ENV === 'test') {
     sqlite_file = "temp.sqlite"
 }
-const DBSOURCE = sqlite_file
+const DBSOURCE = './.db/' + sqlite_file
 console.log(`Using DBSOURCE ${DBSOURCE}`)
 
 

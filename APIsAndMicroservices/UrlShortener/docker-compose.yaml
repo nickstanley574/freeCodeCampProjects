@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    image: urlshortener:latest
+    environment:
+    - PORT=${PORT}
+    - NODE_ENV=${NODE_ENV}
+
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ${PWD}/.db:/usr/src/app/.db
