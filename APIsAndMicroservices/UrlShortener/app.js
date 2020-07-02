@@ -49,6 +49,7 @@ app.get("/api/shorturl/recent/:n", function(req, res) {
     })
 });
 
+
 // redirect based on id
 app.get('/api/shorturl/:id', function(req, res) {
     let id = req.params.id;
@@ -66,11 +67,18 @@ app.get('/api/shorturl/:id', function(req, res) {
 
 // get one url
 app.get('/api/shorturl/:id/data', function(req, res) {
-    console.log()
-    res.json({
-        "original_url": "www.google.com",
-        "short_url": `${req.headers.host}/${req.params.id}`
-    })
+    let id = req.params.id;
+    var sql = "SELECT * FROM shorturl WHERE id = (?)"
+    db.get(sql, [id], (err, row) => {
+        if (err) {
+            res.json({ error: err.message });
+        } else {
+            res.json({
+                "original_url": row.original_url,
+                "short_url": `${req.headers.host}/${req.params.id}`
+            })
+        }
+    });
 })
 
 
