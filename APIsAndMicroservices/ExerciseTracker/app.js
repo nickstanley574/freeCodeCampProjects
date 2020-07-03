@@ -10,7 +10,6 @@ app.use(bodyParser.json())
 
 
 // DATABASE CONNECTION
-
 const mongoose = require('mongoose')
 mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/exercise-track', {
     useNewUrlParser: true,
@@ -76,6 +75,7 @@ app.get('/api/exercise/users', function(req, res) {
 // If no date supplied it will use current date. Returned will be the user object with also with the exercise fields added.
 app.post('/api/exercise/add', function(req, res) {
     console.log('/api/exercise/add')
+    if (req.body.date === "") req.body.date = undefined;
     const exercise = new Exercise(req.body);
     User.findById(req.body.userId, function(err, user) {
         exercise.save((error, exerciseRecord) => {
