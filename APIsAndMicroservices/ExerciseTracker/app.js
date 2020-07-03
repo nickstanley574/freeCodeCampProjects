@@ -60,7 +60,7 @@ app.post('/api/exercise/new-user', function(req, res) {
             return console.error(err.code);
         }
         res.json({
-            username: newUser.name,
+            username: newUser.username,
             _id: newUser.id
         })
     })
