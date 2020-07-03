@@ -76,10 +76,16 @@ app.get('/api/exercise/users', function(req, res) {
 // If no date supplied it will use current date. Returned will be the user object with also with the exercise fields added.
 app.post('/api/exercise/add', function(req, res) {
     console.log('/api/exercise/add')
+    const exercise = new Exercise(req.body);
     User.findById(req.body.userId, function(err, user) {
-        console.log(user)
+        exercise.save((error, exerciseRecord) => {
+            user.exercises.push(exercise);
+            Exercise.populate(user, { path: "exercises" });
+            user.save(function(err, user) {
+                res.json(user)
+            })
+        })
     });
-    res.json({ foo: "bar" })
 })
 
 
