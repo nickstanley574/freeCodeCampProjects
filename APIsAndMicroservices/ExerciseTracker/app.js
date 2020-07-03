@@ -56,8 +56,8 @@ app.post('/api/exercise/new-user', function(req, res) {
         if (err) {
             if (err.code == 11000) {
                 res.json({
-                    error: "Username already taken",
-                    code: err.code
+                    error: "MONGO_ERROR",
+                    code: err.message
                 })
                 return console.error(err.message);
             }
