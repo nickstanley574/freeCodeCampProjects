@@ -9,3 +9,4 @@ LICENSE
 .vscode
 *.sqlite
 .db
+mongo-volume/
