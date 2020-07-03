@@ -26,7 +26,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // DATABASE SCHEMA
 
 const userSchema = new mongoose.Schema({
-    name: {
+    username: {
         type: String,
         required: true,
         unique: true
@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 app.post('/api/exercise/new-user', function(req, res) {
     console.log('/api/exercise/new-user')
     let username = req.body.username
-    let newUser = new User({ name: username });
+    let newUser = new User({ username: username });
     newUser.save((err, newUser) => {
         if (err) {
             if (err.code == 11000) {
@@ -60,7 +60,7 @@ app.post('/api/exercise/new-user', function(req, res) {
             return console.error(err.code);
         }
         res.json({
-            name: newUser.name,
+            username: newUser.name,
             _id: newUser.id
         })
     })
