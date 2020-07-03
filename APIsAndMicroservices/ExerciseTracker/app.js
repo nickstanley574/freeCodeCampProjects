@@ -26,7 +26,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // DATABASE SCHEMA
 
 const userSchema = new mongoose.Schema({
-    name: String,
     username: {
         type: String,
         required: true,
@@ -34,12 +33,6 @@ const userSchema = new mongoose.Schema({
     }
 });
 const User = mongoose.model("User", userSchema)
-
-
-User.update({}, { $rename: { name: 'username' } }, { multi: true }, function(err, blocks) {
-    if (err) { throw err; }
-    console.log('done!');
-});
 
 // APP
 
