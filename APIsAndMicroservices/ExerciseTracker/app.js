@@ -82,7 +82,13 @@ app.post('/api/exercise/add', function(req, res) {
             user.exercises.push(exercise);
             Exercise.populate(user, { path: "exercises" });
             user.save(function(err, user) {
-                res.json(exercise)
+                res.json({
+                    _id: exercise._id,
+                    username: user.username,
+                    date: exercise.date,
+                    duration: exercise.duration,
+                    description: exercise.description
+                })
             })
         })
     });
