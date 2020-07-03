@@ -12,7 +12,11 @@ app.use(bodyParser.json())
 // DATABASE CONNECTION
 
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MLAB_URI || 'mongodb://localhost/exercise-track', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MLAB_URI || 'mongodb://localhost/exercise-track', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
 
 //Get the default connection
 var db = mongoose.connection;
@@ -22,8 +26,11 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // DATABASE SCHEMA
 
 const userSchema = new mongoose.Schema({
-    name: String
-
+    name: {
+        type: String,
+        required: true,
+        unique: true
+    }
 });
 const User = mongoose.model("User", userSchema)
 
@@ -42,8 +49,15 @@ app.post('/api/exercise/new-user', function(req, res) {
     let newUser = new User({ name: username });
     newUser.save((err, newUser) => {
         if (err) {
+            if (err.code == 11000) {
+                res.json({
+                    error: "Username already taken",
+                    code: err.code
+                })
+                return console.error(err.message);
+            }
             res.json({ error: "Opps! Something is Wrong!" })
-            return console.error(err);
+            return console.error(err.code);
         }
         res.json({
             name: newUser.name,
@@ -53,7 +67,6 @@ app.post('/api/exercise/new-user', function(req, res) {
 });
 
 // app.post('/api/exercise/add', function(req, res) {});
-
 
 app.get('/is-mongoose-ok', function(req, res) {
     console.log("/is-mongoose-ok")
