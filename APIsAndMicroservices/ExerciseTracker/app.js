@@ -18,21 +18,10 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/exercise-track', 
     useCreateIndex: true
 })
 
-//Get the default connection
-var db = mongoose.connection;
-//Bind connection to error event (to get notification of connection errors)
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// DATABASE MODELS
+const User = require("./models/user");
 
-// DATABASE SCHEMA
 
-const userSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    }
-});
-const User = mongoose.model("User", userSchema)
 
 // APP
 
@@ -83,9 +72,20 @@ app.get('/api/exercise/users', function(req, res) {
     });
 })
 
-// app.post('/api/exercise/add', function(req, res) {
+// 3. I can add an exercise to any user by posting form data userId(_id), description, duration, and optionally date to /api/exercise/add.
+// If no date supplied it will use current date. Returned will be the user object with also with the exercise fields added.
+app.post('/api/exercise/add', function(req, res) {
+    console.log('/api/exercise/add')
+    let id = req.body.userId
+    console.log(id)
+    User.findById(id, function(err, user) {
+        console.log(user)
+    });
+    res.json({ foo: "bar" })
+})
 
-// Check if Username Exists
+
+
 
 
 //
