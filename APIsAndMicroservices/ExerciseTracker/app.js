@@ -35,6 +35,11 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema)
 
 
+User.update({}, { $rename: { name: 'username' } }, { multi: true }, function(err, blocks) {
+    if (err) { throw err; }
+    console.log('done!');
+});
+
 // APP
 
 app.use(express.static('public'))
