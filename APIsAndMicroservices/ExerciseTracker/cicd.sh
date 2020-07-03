@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+BRANCH=$(git rev-parse --abbrev-ref HEAD --)
+
+git push origin $BRANCH
+
 echo -e "\n=== Build ===\n"
 
 docker build -t exercisetracker:latest .

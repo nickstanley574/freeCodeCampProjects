@@ -38,10 +38,13 @@ const User = mongoose.model("User", userSchema)
 
 app.use(express.static('public'))
 
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html')
 });
 
+
+// 1. I can create a user by posting form data username to /api/exercise/new-user and returned will be an object with username and _id.
 app.post('/api/exercise/new-user', function(req, res) {
     console.log('/api/exercise/new-user')
     let username = req.body.username
@@ -65,7 +68,27 @@ app.post('/api/exercise/new-user', function(req, res) {
     })
 });
 
-// app.post('/api/exercise/add', function(req, res) {});
+
+// 2. I can get an array of all users by getting api/exercise/users with the same info as when creating a user.
+app.get('/api/exercise/users', function(req, res) {
+    console.log('/api/exercise/users')
+    User.find({}, function(err, users) {
+        var userMap = [];
+
+        users.forEach(function(user) {
+            userMap.push(user)
+        });
+
+        res.json(userMap);
+    });
+})
+
+// app.post('/api/exercise/add', function(req, res) {
+
+// Check if Username Exists
+
+
+//
 
 app.get('/is-mongoose-ok', function(req, res) {
     console.log("/is-mongoose-ok")
