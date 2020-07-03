@@ -62,26 +62,21 @@ app.post('/api/exercise/new-user', function(req, res) {
 app.get('/api/exercise/users', function(req, res) {
     console.log('/api/exercise/users')
     User.find({}, function(err, users) {
-        var userList = [];
-
-        users.forEach(function(user) {
-            userList.push({
+        res.json(users.map(user => {
+            return {
                 username: user.username,
                 _id: user._id
-            })
-        });
-
-        res.json(userList);
+            }
+        }));
     });
 })
+
 
 // 3. I can add an exercise to any user by posting form data userId(_id), description, duration, and optionally date to /api/exercise/add.
 // If no date supplied it will use current date. Returned will be the user object with also with the exercise fields added.
 app.post('/api/exercise/add', function(req, res) {
     console.log('/api/exercise/add')
-    let id = req.body.userId
-    console.log(id)
-    User.findById(id, function(err, user) {
+    User.findById(req.body.userId, function(err, user) {
         console.log(user)
     });
     res.json({ foo: "bar" })
