@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/exercise-track', 
 
 // DATABASE MODELS
 const User = require("./models/user");
-
+const Exercise = require("./models/exercise")
 
 
 // APP
@@ -62,13 +62,16 @@ app.post('/api/exercise/new-user', function(req, res) {
 app.get('/api/exercise/users', function(req, res) {
     console.log('/api/exercise/users')
     User.find({}, function(err, users) {
-        var userMap = [];
+        var userList = [];
 
         users.forEach(function(user) {
-            userMap.push(user)
+            userList.push({
+                username: user.username,
+                _id: user._id
+            })
         });
 
-        res.json(userMap);
+        res.json(userList);
     });
 })
 
