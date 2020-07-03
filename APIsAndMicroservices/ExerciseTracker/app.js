@@ -26,6 +26,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // DATABASE SCHEMA
 
 const userSchema = new mongoose.Schema({
+    name: String,
     username: {
         type: String,
         required: true,
