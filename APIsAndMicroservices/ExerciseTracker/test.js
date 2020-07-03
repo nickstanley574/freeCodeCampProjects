@@ -1,8 +1,5 @@
 // {
-//     "tests": [{
-//             "text": "I can provide my own project, not the example url.",
-//             "testString": "getUserInput => { const url = getUserInput('url'); assert(!(new RegExp('.*/nonstop-pond\\.glitch\\.me\\.*')).test(getUserInput('url'))); } "
-//         },
+//     "tests": [
 //         {
 //             "text": "I can create a user by posting form data username to /api/exercise/new-user and returned will be an object with username and <code>_id</code>.",
 //             "testString": "async getUserInput => { const url = getUserInput('url'); const res = await fetch(url + '/api/exercise/new-user', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `username=fcc_test_${Date.now()}`.substr(0, 29) });\nif (res.ok) { const { _id, username } = await res.json(); assert.exists(_id); assert.exists(username); } else { throw new Error(`${res.status} ${res.statusText}`); } } "

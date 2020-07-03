@@ -82,12 +82,15 @@ app.post('/api/exercise/add', function(req, res) {
             user.exercises.push(exercise);
             Exercise.populate(user, { path: "exercises" });
             user.save(function(err, user) {
-                res.json(user)
+                res.json(exercise)
             })
         })
     });
 })
 
+
+//4. I can retrieve a full exercise log of any user by getting /api/exercise/log with a parameter of userId(_id).
+// Return will be the user object with added array log and count (total exercise count).
 
 
 
