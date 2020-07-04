@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 // DATABASE CONNECTION
 const mongoose = require('mongoose')
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/exercise-track', {
+mongoose.connect(process.env.MONGO_URI || process.env.MONGO_URI_LOCAL_TEST || 'mongodb://localhost/exercise-track', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
