@@ -57,6 +57,23 @@ app.post('/api/exercise/new-user', function(req, res) {
 });
 
 
+app.post('/api/exercise/delete-user', function(req, res) {
+    console.log('/api/exercise/delete-user')
+    User.findByIdAndDelete(req.body.userId, function(err, user) {
+        if (err) {
+            res.json({
+                error: err.message
+            })
+        } else {
+            res.json({
+                delete: "successful",
+                username: user.username
+            })
+        }
+    })
+})
+
+
 // 2. I can get an array of all users by getting api/exercise/users with the same info as when creating a user.
 app.get('/api/exercise/users', function(req, res) {
     console.log('/api/exercise/users')
