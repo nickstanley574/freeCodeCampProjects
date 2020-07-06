@@ -145,7 +145,7 @@ app.post('/api/exercise/add', function(req, res) {
         user.save(function(err, user) {
             let n = user.exercises.length - 1
             res.json({
-                _id: exercise_entry._id,
+                _id: user._id,
                 username: user.username,
                 date: user.exercises[n].date.toString().slice(0, 15),
                 duration: user.exercises[n].duration,
