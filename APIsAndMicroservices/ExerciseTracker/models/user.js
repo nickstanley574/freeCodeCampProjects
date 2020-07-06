@@ -8,8 +8,18 @@ const User = new Schema({
         unique: true
     },
     exercises: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Exercise"
+        description: {
+            type: String,
+            required: true
+        },
+        duration: {
+            type: Number,
+            required: true
+        },
+        date: {
+            type: Date,
+            default: Date.now
+        }
     }]
 });
 

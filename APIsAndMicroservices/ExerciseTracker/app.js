@@ -19,8 +19,6 @@ mongoose.connect(process.env.MONGO_URI || process.env.MONGO_URI_LOCAL_TEST || 'm
 
 // DATABASE MODELS
 const User = require("./models/user");
-const Exercise = require("./models/exercise")
-
 
 // APP
 
@@ -65,6 +63,7 @@ app.post('/api/exercise/delete-user', function(req, res) {
                 error: err.message
             })
         } else {
+            Exercise.find({ userId: user._id }).remove();
             res.json({
                 delete: "successful",
                 username: user.username
@@ -93,22 +92,27 @@ app.get('/api/exercise/users', function(req, res) {
 app.post('/api/exercise/add', function(req, res) {
     console.log('/api/exercise/add')
     if (req.body.date === "") req.body.date = undefined;
-    const exercise = new Exercise(req.body);
     User.findById(req.body.userId, function(err, user) {
-        exercise.save((error, exerciseRecord) => {
-            user.exercises.push(exercise);
-            Exercise.populate(user, { path: "exercises" });
-            user.save(function(err, user) {
-                res.json({
-                    _id: exercise._id,
-                    username: user.username,
-                    date: exercise.date.toString().slice(0, 15),
-                    duration: exercise.duration,
-                    description: exercise.description
-                })
+
+        exercise_entry = {
+            description: req.body.description,
+            duration: req.body.duration,
+            date: req.body.date
+        }
+
+        user.exercises.push(exercise_entry)
+
+        user.save(function(err, user) {
+            let n = user.exercises.length - 1
+            res.json({
+                _id: exercise_entry._id,
+                username: user.username,
+                date: user.exercises[n].date.toString().slice(0, 15),
+                duration: user.exercises[n].duration,
+                description: user.exercises[n].description
             })
         })
-    });
+    })
 })
 
 
