@@ -178,7 +178,7 @@ app.get('/api/exercise/log', function(req, res) {
                 description: e.description,
                 duration: e.duration,
                 date: e.date.toDateString()
-            })).sort('-date').slice(0, limit)
+            })).slice(0, limit)
 
         res.json({
             _id: user._id,
