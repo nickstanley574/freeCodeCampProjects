@@ -165,6 +165,9 @@ app.get('/api/exercise/log', function(req, res) {
     const to = new Date(req.query.to || Date.now())
     const limit = (req.query.limit || undefined)
 
+
+    console.log(`from=${from}  to=${to}   limit=${limit}`)
+
     User.findById(req.query.userId, function(err, user) {
 
         let log = user.exercises
