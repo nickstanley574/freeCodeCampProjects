@@ -104,7 +104,6 @@ app.post('/api/exercise/delete-user', function(req, res) {
                 error: err.message
             })
         } else {
-            Exercise.find({ userId: user._id }).remove();
             res.json({
                 delete: "successful",
                 username: user.username

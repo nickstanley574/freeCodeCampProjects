@@ -33,6 +33,16 @@ request.post(`${localUrl}/api/exercise/new-user`, { json: { username: "test_01" 
 request.post(`${localUrl}/api/exercise/new-user`, { json: { username: "test_02" } })
 
 
+
+request.get(`${localUrl}/api/exercise/users`, function(err, res, body) {
+    console.log(typeof(body))
+    JSON.parse(body).forEach(function(value) {
+        console.log(value._id);
+        request.post(`${localUrl}/api/exercise/delete-user`, { json: { userId: value._id } })
+    });
+
+})
+
 //         {
 //             "text": "I can add an exercise to any user by posting form data userId(_id), description, duration, and optionally date to /api/exercise/add. If no date supplied it will use current date. App will return the user object with the exercise fields added.",
 //             "testString": "async getUserInput => { const url = getUserInput('url'); const res = await fetch(url + '/api/exercise/new-user', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `username=fcc_test_${Date.now()}`.substr(0, 29) });\nif (res.ok) { const { _id, username } = await res.json(); const expected = { username, description: 'test', duration: 60, _id, date: 'Mon Jan 01 1990' };\nconst addRes = await fetch(url + '/api/exercise/add', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: `userId=${_id}&description=${expected.description}&duration=${expected.duration}&date=1990-01-01` }); if (addRes.ok) { const actual = await addRes.json(); assert.deepEqual(actual, expected); } else { throw new Error(`${addRes.status} ${addRes.statusText}`); } } else { throw new Error(`${res.status} ${res.statusText}`); } } "
