@@ -2,6 +2,8 @@
 
 https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/exercise-tracker
 
+https://fcc-exercisetracker-ns574.herokuapp.com/
+
 ### User Stories
 
 1. I can create a user by posting form data username to /api/exercise/new-user and returned will be an object with username and _id.
