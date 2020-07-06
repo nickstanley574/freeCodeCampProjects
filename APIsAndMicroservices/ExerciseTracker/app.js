@@ -160,7 +160,7 @@ app.post('/api/exercise/add', function(req, res) {
 // Return will be the user object with added array log and count (total exercise count).
 app.get('/api/exercise/log', function(req, res) {
     console.log('/api/exercise/log')
-
+    console.log(req)
     User.findById(req.query.userId, function(err, user) {
         res.json({
             _id: user._id,
