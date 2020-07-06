@@ -35,7 +35,7 @@ const UserSchema = new Schema({
         required: true,
         unique: true
     },
-    exercises: [{
+    exercises: [new Schema({
         description: {
             type: String,
             required: true
@@ -48,7 +48,7 @@ const UserSchema = new Schema({
             type: Date,
             default: Date.now
         }
-    }]
+    }, { _id: false, id: false })]
 });
 
 const User = mongoose.model("User", UserSchema);
@@ -161,7 +161,6 @@ app.post('/api/exercise/add', function(req, res) {
 app.get('/api/exercise/log', function(req, res) {
     console.log('/api/exercise/log')
     User.findById(req.query.userId, function(err, user) {
-
         res.json({
             _id: user._id,
             username: user.username,
