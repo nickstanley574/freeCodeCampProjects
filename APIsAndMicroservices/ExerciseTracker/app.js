@@ -163,6 +163,7 @@ app.get('/api/exercise/log', function(req, res) {
 
     const from = new Date(req.query.from || 0)
     const to = new Date(req.query.to || Date.now())
+    const limit = (req.query.limit || undefined)
 
     User.findById(req.query.userId, function(err, user) {
 
@@ -174,7 +175,7 @@ app.get('/api/exercise/log', function(req, res) {
                 description: e.description,
                 duration: e.duration,
                 date: e.date.toDateString()
-            }))
+            })).sort('-date').slice(0, limit)
 
         res.json({
             _id: user._id,
