@@ -9,8 +9,18 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-// DATABASE CONNECTION
+// _________________________________________________
+//  ____    _  _____  _    ____    _    ____  _____
+// |  _ \  / \|_   _|/ \  | __ )  / \  / ___|| ____|
+// | | | |/ _ \ | | / _ \ |  _ \ / _ \ \___ \|  _|
+// | |_| / ___ \| |/ ___ \| |_) / ___ \ ___) | |_
+// |____/_/   \_|_/_/   \_|____/_/   \_|____/|_____|
+// _________________________________________________
+
+
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
+
 mongoose.connect(process.env.MONGO_URI || process.env.MONGO_URI_LOCAL_TEST || 'mongodb://localhost/exercise-track', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -18,9 +28,40 @@ mongoose.connect(process.env.MONGO_URI || process.env.MONGO_URI_LOCAL_TEST || 'm
 })
 
 // DATABASE MODELS
-const User = require("./models/user");
 
-// APP
+const UserSchema = new Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    exercises: [{
+        description: {
+            type: String,
+            required: true
+        },
+        duration: {
+            type: Number,
+            required: true
+        },
+        date: {
+            type: Date,
+            default: Date.now
+        }
+    }]
+});
+
+const User = mongoose.model("User", UserSchema);
+
+
+// _______________________
+//      _    ____  ____
+//     / \  |  _ \|  _ \
+//    / _ \ | |_) | |_) |
+//   / ___ \|  __/|  __/
+//  /_/   \_|_|   |_|
+// _______________________
+
 
 app.use(express.static('public'))
 
@@ -122,7 +163,6 @@ app.post('/api/exercise/add', function(req, res) {
 
 
 
-//
 
 app.get('/is-mongoose-ok', function(req, res) {
     console.log("/is-mongoose-ok")
