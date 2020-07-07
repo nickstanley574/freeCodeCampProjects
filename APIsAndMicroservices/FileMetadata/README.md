@@ -1,5 +1,11 @@
 # APIs and Microservices Projects - File Metadata Microservice
 
+https://fcc-filemetadata-ns574.herokuapp.com/
+
+https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice
+
+https://github.com/nickstanley574/freeCodeCampProjects/tree/master/APIsAndMicroservices/FileMetadata
+
 Build a full stack JavaScript app that is functionally similar to this: https://purple-paladin.glitch.me/.
 
 ### User stories:
