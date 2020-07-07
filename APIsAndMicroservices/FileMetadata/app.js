@@ -6,6 +6,9 @@ const app = express();
 var cors = require('cors');
 app.use(cors({ optionSuccessStatus: 200 })); // some legacy browsers choke on 204
 
+var multer = require('multer');
+var storage = multer.memoryStorage();
+var upload = multer({ storage: storage });
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
