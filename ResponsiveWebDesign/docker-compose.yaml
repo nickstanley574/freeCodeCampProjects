@@ -3,5 +3,7 @@ services:
   web:
     container_name: responsivewebdesign-web
     image: responsivewebdesign:latest
+    environment:
+    - PORT=${PORT}
     ports:
-      - "80:80"
+      - "${PORT}:${PORT}"
