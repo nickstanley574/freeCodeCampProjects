@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web:
+    container_name: responsivewebdesign-web
+    image: responsivewebdesign:latest
+    ports:
+      - "80:80"
