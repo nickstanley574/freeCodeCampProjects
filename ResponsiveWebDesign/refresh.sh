@@ -4,3 +4,4 @@ docker build -t responsivewebdesign:latest .
 docker-compose up -d
 sleep 2
 docker container ls
+echo "http://localhost:3333/"
