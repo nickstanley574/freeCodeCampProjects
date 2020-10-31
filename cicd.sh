@@ -15,6 +15,7 @@ sleep 2
 echo
 echo "=== Release ==="
 echo
+cat .git/refs/remotes/origin/master
 heroku container:release web --app freecodecamp-projects-ns574
 sleep 1
 heroku ps:restart --app freecodecamp-projects-ns574
