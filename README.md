@@ -24,7 +24,7 @@ Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/ResponsiveWebDes
 
 
 <div style="padding: 25px; text-align: center;">
-    <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="25%"/>
+    <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="35%"/>
 </div>
 
 
@@ -40,5 +40,5 @@ Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/FrontEndLibrarie
 
 
 <div style="padding: 25px; text-align: center;">
-    <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="25%"/>
+    <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="35%"/>
 </div>
