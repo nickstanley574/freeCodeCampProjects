@@ -1,213 +1,214 @@
-html,body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  position: relative;
-  min-width: 1100;
-  background-color:whitesmoke;
+html,
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    min-width: 1100;
+    background-color: whitesmoke;
 }
 
 header #nav-bar {
-  background-color: #96858F;
-  padding: 0;
-  position: fixed;
-  width: 100%;
+    background-color: #96858F;
+    padding: 0;
+    position: fixed;
+    width: 100%;
 }
 
 header ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 header .nav-link {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1em;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 84%;
-
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 li a:hover {
-  background-color: rgb(156, 146, 152);
+    background-color: rgb(156, 146, 152);
 }
 
 #header-img {
-  position: absolute;
-  padding-left: 50px;
+    position: absolute;
+    padding-left: 50px;
 }
 
-
 @media (max-width: 850px) {
-  #header-img {
-    position: relative;
-    margin: auto;
-  }
+    #header-img {
+        position: relative;
+        margin: auto;
+    }
 }
 
 .container {
-  padding-left: 20%;
-  padding-right: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 footer {
-  margin-top: 30px;
-  background-color: #ddd;
-  padding: 20px;
+    margin-top: 30px;
+    background-color: #ddd;
+    padding: 20px;
 }
 
 footer ul {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 footer li {
-  padding: 0 10px;
-  list-style-type: none;
+    padding: 0 10px;
+    list-style-type: none;
 }
 
 #mailing-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 200px;
-  margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    margin-top: 50px;
 }
 
 input[type="email"] {
-  max-width: 275px;
-  width: 100%;
-  padding: 5px;
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
 }
 
 input[type="submit"] {
-  max-width: 150px;
-  width: 100%;
-  height: 30px;
-  margin: 15px 0;
-  border: 0;
-  background-color: #f1c40f;
+    max-width: 150px;
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    border: 0;
+    background-color: #f1c40f;
 }
 
 input[type="submit"]:hover {
-  background-color: orange;
-  transition: background-color 1s;
+    background-color: orange;
+    transition: background-color 1s;
 }
 
-#backlit-curve img{
-  max-width: 100%;
-  height: auto;
+#backlit-curve img {
+    max-width: 100%;
+    height: auto;
 }
 
 #railcar-header {
-  align-items: center;
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 150%;
-  padding-top: 25px;
-  padding-bottom: 15px;
-
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 150%;
+    padding-top: 25px;
+    padding-bottom: 15px;
 }
 
 .railcar-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .railcars {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: calc(100%  / 3);
-  margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
 }
 
 .railcar-name {
-  background-color: #6D7993;
-  color: white;;
-  padding: 15px 0;
-  width: 100%;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 5px;
+    background-color: #6D7993;
+    color: white;
+    ;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
 }
 
 .railcar-features {
-  padding: 10px;
+    padding: 10px;
 }
 
 .btn {
-  padding: 10px;
-  margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .railcar-img {
-  margin-top: 8px;
+    margin-top: 8px;
 }
 
 .event {
-  border-radius: 5px;
-  margin-bottom: 35px;
-  height: 300px;
-  max-width: 700px;
-  margin: 35px auto;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    height: 300px;
+    max-width: 700px;
+    margin: 35px auto;
 }
 
 .event-name-container {
-  height: 20%;
-  font-weight: 700;
-  background-color: #9099a2;
-  color: white;
-  display: flex;               /* establish flex container */
-  align-items: center;         /* vertically center flex items */
-  width:100%;
-  border-radius: 5px;
+    height: 20%;
+    font-weight: 700;
+    background-color: #9099a2;
+    color: white;
+    display: flex;
+    /* establish flex container */
+    align-items: center;
+    /* vertically center flex items */
+    width: 100%;
+    border-radius: 5px;
 }
 
 .event-name {
-  width: 100%;
-  text-align:center;
+    width: 100%;
+    text-align: center;
 }
 
 .event-promo {
-  width: auto;
-  height: 80%;
-  overflow: hidden;
-  
+    width: auto;
+    height: 80%;
+    overflow: hidden;
 }
 
 .event-media-container {
-  width: 50%;
-  height: 100%;
-  float: left;
+    width: 50%;
+    height: 100%;
+    float: left;
 }
 
 .event-media {
-  height:90%;
-  width: 90%;
-  padding: 10px;
+    height: 90%;
+    width: 90%;
+    padding: 10px;
 }
 
 .event-copy-container {
-  text-align: left;
-  width:50%;
-  height:100%;
-  float: left;
-  display: flex;               /* establish flex container */
-  align-items: center;         /* vertically center flex items */
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    /* establish flex container */
+    align-items: center;
+    /* vertically center flex items */
 }
 
 .event-copy {
-  padding-left: 5%;
-  padding-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
