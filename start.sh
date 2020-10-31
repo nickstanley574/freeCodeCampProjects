@@ -8,7 +8,7 @@ cat <<EOT >> index.html
 <footer>
     <p>
         Generated: $(date)<br>
-        SHA: $(curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq .object.sha)
+        SHA: $(curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha)
     </p>
 </footer>
 EOT
