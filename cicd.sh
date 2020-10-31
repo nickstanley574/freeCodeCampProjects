@@ -16,5 +16,7 @@ echo
 echo "=== Release ==="
 echo
 heroku container:release web --app freecodecamp-projects-ns574
+sleep 1
+heroku ps:restart --app freecodecamp-projects-ns574
 echo
 echo "Done."
