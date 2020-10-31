@@ -2,6 +2,8 @@
 
 Certification Homepage: [fcc-responsivewebdesign-ns574](https://freecodecamp-projects-ns574.herokuapp.com/)
 
+GitHub: [nickstanley574/freeCodeCampProjects/](https://github.com/nickstanley574/freeCodeCampProjects/)
+
 I decided to spend the time doing FreeCodeCamp certification for three reasons.
 
 First, is I have noticed a lot of Node, React, JavaScript, essentially Frontend developers are being hired with no formal coding training. Instead they have a code bootcamp and freeCodeCamp listed in their education. Wanting to see what more more self starter developers are using to learn I wanted to keep with the times and do the certification myself.
@@ -14,7 +16,7 @@ Third, I am not a app developer, but  I support fronted pipelines, testing proce
 ## Responsive Web Design Certification
 
 
-Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
+GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
 
 * [#1 Build a Tribute Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Build-a-Trubute-Page/)
 * [#2 Build a Survey Form](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Survey-Form/)
@@ -30,7 +32,7 @@ Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/ResponsiveWebDes
 
 ## Front End Libraries Certification
 
-Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
+GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
 * [#1 Random Quote Machine](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/RandomQuoteMachine/)
 * [#2 Markdown Previewer](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/MarkdownPreviewer/)
@@ -45,7 +47,7 @@ Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/FrontEndLibrarie
 
 ## Data Visualization Certification
 
-Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
+GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
 * [#1 Visualize Data with a Bar Chart](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataBarChart/)
 * [#2 Visualize Data with a Scatterplot Graph](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataScatterplotGraph/)
