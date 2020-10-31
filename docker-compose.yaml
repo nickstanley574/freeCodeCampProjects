@@ -1,8 +1,8 @@
 version: '3'
 services:
   web:
-    container_name: responsivewebdesign-web
-    image: responsivewebdesign:latest
+    container_name: freecodecamp-projects-ns574
+    image: freecodecamp-projects-ns574:latest
     environment:
     - PORT=${PORT}
     ports:

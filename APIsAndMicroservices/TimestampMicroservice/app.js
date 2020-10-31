@@ -10,6 +10,7 @@ app.use(cors({ optionSuccessStatus: 200 })); // some legacy browsers choke on 20
 
 
 app.get('/', function(req, res) {
+    console.log(req.body)
     res.sendFile(__dirname + '/index.html');
 });
 
