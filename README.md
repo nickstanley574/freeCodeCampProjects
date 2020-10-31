@@ -42,3 +42,17 @@ Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/FrontEndLibrarie
 <div style="padding: 25px; text-align: center;">
     <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="35%"/>
 </div>
+
+## Data Visualization Certification
+
+Certification GitHub Repo: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
+
+* [#1 Visualize Data with a Bar Chart](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataBarChart/)
+* [#2 Visualize Data with a Scatterplot Graph](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataScatterplotGraph/)
+* [#3 Visualize Data with a Heat Map](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataHeatMap/)
+* [#4 Visualize Data with a Choropleth Map](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeChoroplethMap/)
+* [#5 Visualize Data with a Treemap Diagram](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataTreemapDiagram/)
+
+<div style="padding: 25px; text-align: center;">
+    <img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="35%"/>
+</div>
