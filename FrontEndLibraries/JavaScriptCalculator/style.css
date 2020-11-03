@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+#app {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body {
+  background: blanchedalmond;
+}
+
+#display {
+  background: black;
+  color: greenyellow;
+  height: 40px;
+  margin: 2px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 2px;
+}
+
+button {
+  position: relative;
+  border: none;
+  width: 80px;
+  height: 70px;
+  margin: 2px;
+  font-size: 20px;
+  background: #4d4d4d;
+  color: white;
+}
+
+button:hover {
+  color: black;
+  outline: .15em solid black;
+  font-size: 23px;
+}
+
+.operator {
+  background: grey;
+}
+
+.largeButton {
+  width: 164px;
+}
+
+#clear {
+  background: darkred;
+}
+
+#equals {
+  background: blue;
+  height: 144px;
+  bottom: 148px;
+  left: 252px;
+}
+/*# sourceMappingURL=style.css.map */
