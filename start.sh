@@ -17,6 +17,7 @@ EOT
 cat body.html >> index.html
 
 cat <<EOT >> index.html
+<hr>
 <footer>
     <p>
         Generated: $(date)<br>
