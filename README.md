@@ -58,3 +58,16 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 <div style="padding: 25px; text-align: center;">
     <img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="35%"/>
 </div>
+
+## JavaScript Algorithms DataStructures
+
+<div style="padding: 25px; text-align: center;">
+    <img src="DataVisualization/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
+</div>
+
+
+## APIs and Microservices
+
+<div style="padding: 25px; text-align: center;">
+    <img src="DataVisualization/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
+</div>
