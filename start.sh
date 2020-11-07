@@ -10,7 +10,7 @@ cat <<EOT >> index.html
 </head>
 EOT
 
-cat  body.html >> index.html
+cat body.html >> index.html
 
 cat <<EOT >> index.html
 <footer>
