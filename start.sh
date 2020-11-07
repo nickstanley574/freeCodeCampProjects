@@ -6,7 +6,7 @@ markdown README.md > body.html
 
 cat <<EOT >> index.html
 <head>
-    <title>FreeCodeCamp Projects | nickstanley574
+    <title>FreeCodeCamp Projects | nickstanley574</title>
 </head>
 EOT
 
