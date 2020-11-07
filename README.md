@@ -54,6 +54,14 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 
 ## JavaScript Algorithms DataStructures
 
+GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/JavaScriptAlgorithmsDataStructures)
+
+* [#1 Palindrome Checker](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/PalindromeChecker.js)
+* [#2 Roman Numeral Converter](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/RomanNumeralConverter.js)
+* [#3 Caesars Cipher](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/CaesarsCipher.js)
+* [#4 Telephone Number Validator](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/TelephoneNumberValidator.js)
+* [#5 Cash Register](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/CashRegister.js)
+
 <img src="JavaScriptAlgorithmsDataStructures/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="40%"/>
 
 
