@@ -4,8 +4,6 @@ unzip master.zip -d ./tmp
 mv ./tmp/*/* .
 markdown README.md > body.html
 rm index.html
-curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha >> sha
-
 
 cat <<EOT >> index.html
 <head>
@@ -25,5 +23,6 @@ cat <<EOT >> index.html
     </p>
 </footer>
 EOT
+curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha >> sha
 
 httpd-foreground
