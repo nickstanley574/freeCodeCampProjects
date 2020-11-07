@@ -8,6 +8,7 @@ rm index.html
 cat <<EOT >> index.html
 <head>
     <title>FreeCodeCamp Projects | nickstanley574</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 EOT
 
