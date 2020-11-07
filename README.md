@@ -23,7 +23,7 @@ GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://githu
 * [#4 Build a Technical Documentation Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Technical-Documentation-Page/)
 * [#5 Build a Personal Portfolio Webpage](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/PersonalPortfolioWebpage/)
 
-<img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="40%"/>
+<img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="45%"/>
 
 
 ## Front End Libraries Certification
@@ -37,7 +37,7 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 * [#5 Pomodoro Clock](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/PomodoroClock/)
 
 
-<img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="40%"/>
+<img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="45%"/>
 
 ## Data Visualization Certification
 
@@ -49,7 +49,7 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 * [#4 Visualize Data with a Choropleth Map](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeChoroplethMap/)
 * [#5 Visualize Data with a Treemap Diagram](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataTreemapDiagram/)
 
-<img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="40%"/>
+<img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="45%"/>
 
 
 ## JavaScript Algorithms DataStructures
@@ -62,7 +62,7 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 * [#4 Telephone Number Validator](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/TelephoneNumberValidator.js)
 * [#5 Cash Register](https://github.com/nickstanley574/freeCodeCampProjects/blob/master/JavaScriptAlgorithmsDataStructures/CashRegister.js)
 
-<img src="JavaScriptAlgorithmsDataStructures/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="40%"/>
+<img src="JavaScriptAlgorithmsDataStructures/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="45%"/>
 
 
 ## APIs and Microservices
@@ -75,4 +75,4 @@ GitHub: [nickstanley574/freeCodeCampProjects/APIsAndMicroservices/](https://gith
 * [#4 Exercise Tracker](https://fcc-exercisetracker-ns574.herokuapp.com)
 * [#5 File Metadata Microservice](https://fcc-filemetadata-ns574.herokuapp.com)
 
-<img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="40%"/>
+<img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="45%"/>
