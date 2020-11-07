@@ -1,8 +1,16 @@
-#!/bin/bash
+# #!/bin/bash
 wget https://github.com/nickstanley574/freeCodeCampProjects/archive/master.zip
 unzip master.zip -d ./tmp
 mv ./tmp/*/* .
-markdown README.md > index.html
+markdown README.md > body.html
+
+cat <<EOT >> index.html
+<head>
+    <title>FreeCodeCamp Projects | nickstanley574
+</head>
+EOT
+
+cat  body.html >> index.html
 
 cat <<EOT >> index.html
 <footer>
