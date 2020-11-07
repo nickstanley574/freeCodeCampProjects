@@ -15,7 +15,6 @@ Third, I am not a app developer, but  I support fronted pipelines, testing proce
 
 ## Responsive Web Design Certification
 
-
 GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
 
 * [#1 Build a Tribute Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Build-a-Trubute-Page/)
@@ -23,7 +22,6 @@ GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://githu
 * [#3 Build a Product Landing Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Product-Landing-Page/)
 * [#4 Build a Technical Documentation Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Technical-Documentation-Page/)
 * [#5 Build a Personal Portfolio Webpage](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/PersonalPortfolioWebpage/)
-
 
  <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="40%"/>
 
@@ -39,9 +37,7 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 * [#5 Pomodoro Clock](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/PomodoroClock/)
 
 
-<div style="padding: 25px; text-align: center;">
-    <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="35%"/>
-</div>
+<img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="40%"/>
 
 ## Data Visualization Certification
 
@@ -53,15 +49,12 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 * [#4 Visualize Data with a Choropleth Map](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeChoroplethMap/)
 * [#5 Visualize Data with a Treemap Diagram](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataTreemapDiagram/)
 
-<div style="padding: 25px; text-align: center;">
-    <img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="35%"/>
-</div>
+<img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="40%"/>
+
 
 ## JavaScript Algorithms DataStructures
 
-<div style="padding: 25px; text-align: center;">
-    <img src="JavaScriptAlgorithmsDataStructures/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
-</div>
+<img src="JavaScriptAlgorithmsDataStructures/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="40%"/>
 
 
 ## APIs and Microservices
@@ -74,6 +67,4 @@ GitHub: [nickstanley574/freeCodeCampProjects/APIsAndMicroservices/](https://gith
 * [#4 Exercise Tracker](https://fcc-exercisetracker-ns574.herokuapp.com)
 * [#5 File Metadata Microservice](https://fcc-filemetadata-ns574.herokuapp.com)
 
-<div style="padding: 25px; text-align: center;">
-    <img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
-</div>
+<img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="40%"/>
