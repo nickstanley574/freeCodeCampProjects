@@ -1,5 +1,8 @@
 #!/bin/bash
 
+markdown README.md > body.html
+rm index.html
+
 curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha >> sha
 
 cat <<EOT >> index.html
@@ -17,8 +20,6 @@ cat <<EOT >> index.html
     <p>
         Generated: $(date)<br>
         SHA: $(cat sha)
-    </p>
-    <p>
         Nicholas Stanley
     </p>
 </footer>
