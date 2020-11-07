@@ -68,6 +68,14 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 
 ## APIs and Microservices
 
+GitHub: [nickstanley574/freeCodeCampProjects/APIsAndMicroservices/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/APIsAndMicroservices)
+
+* [#1 Timestamp Microservice](https://fcc-timestamp-ns574.herokuapp.com)
+* [#2 Request Header Parser Microservice](https://fcc-header-parser-ns574.herokuapp.com)
+* [#3 URL Shortener Microservice](https://fcc-urlshortener-ns574.herokuapp.com)
+* [#4 Exercise Tracker](https://fcc-exercisetracker-ns574.herokuapp.com)
+* [#5 File Metadata Microservice](https://fcc-filemetadata-ns574.herokuapp.com)
+
 <div style="padding: 25px; text-align: center;">
     <img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
 </div>
