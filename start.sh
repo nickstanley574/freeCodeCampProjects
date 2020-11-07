@@ -4,6 +4,8 @@ unzip master.zip -d ./tmp
 mv ./tmp/*/* .
 markdown README.md > body.html
 rm index.html
+curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha >> sha
+
 
 cat <<EOT >> index.html
 <head>
@@ -18,7 +20,7 @@ cat <<EOT >> index.html
 <footer>
     <p>
         Generated: $(date)<br>
-        SHA: $(curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha)
+        SHA: $(cat sha)
     </p>
 </footer>
 EOT
