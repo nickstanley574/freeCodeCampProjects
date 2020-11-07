@@ -16,7 +16,7 @@ cat <<EOT >> index.html
     <hr>
     <p>
         Generated: $(date)<br>
-        SHA: $(cat sha) <br>
+        SHA: $(cat sha)<br>
         © Nicholas Stanley
     </p>
 </footer>
