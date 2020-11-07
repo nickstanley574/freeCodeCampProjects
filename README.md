@@ -62,12 +62,12 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 ## JavaScript Algorithms DataStructures
 
 <div style="padding: 25px; text-align: center;">
-    <img src="DataVisualization/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
+    <img src="JavaScriptAlgorithmsDataStructures/JavaScriptAlgorithmsAndDataStructuresCertification.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
 </div>
 
 
 ## APIs and Microservices
 
 <div style="padding: 25px; text-align: center;">
-    <img src="DataVisualization/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
+    <img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="35%"/>
 </div>
