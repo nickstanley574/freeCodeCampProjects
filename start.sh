@@ -17,8 +17,8 @@ EOT
 cat body.html >> index.html
 
 cat <<EOT >> index.html
-<hr>
 <footer>
+    <hr>
     <p>
         Generated: $(date)<br>
         SHA: $(cat sha)
