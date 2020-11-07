@@ -7,6 +7,4 @@ rm index.html
 
 ./start-a.sh
 
-curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha >> sha
-
 httpd-foreground
