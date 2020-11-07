@@ -23,7 +23,7 @@ GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://githu
 * [#4 Build a Technical Documentation Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Technical-Documentation-Page/)
 * [#5 Build a Personal Portfolio Webpage](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/PersonalPortfolioWebpage/)
 
- <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="40%"/>
+<img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="40%"/>
 
 
 ## Front End Libraries Certification
