@@ -15,7 +15,8 @@ sleep 2
 echo
 echo "=== Release ==="
 echo
-cat .git/refs/remotes/origin/master
+echo "local:  $(cat .git/refs/remotes/origin/master)"
+echo "github: $(curl -s https://api.github.com/repos/nickstanley574/freeCodeCampProjects/git/refs/heads/master | jq -r .object.sha)"
 heroku container:release web --app freecodecamp-projects-ns574
 sleep 1
 heroku ps:restart --app freecodecamp-projects-ns574
