@@ -4,7 +4,7 @@ Certification Homepage: [fcc-responsivewebdesign-ns574](https://freecodecamp-pro
 
 Github: [nickstanley574/freeCodeCampProjects/](https://github.com/nickstanley574/freeCodeCampProjects/)
 
-Github Pages: https://nickstanley574.github.io/freeCodeCampProjects/
+Github Pages: [nickstanley574.github.io/freeCodeCampProjects/](https://nickstanley574.github.io/freeCodeCampProjects/)
 
 I decided to spend the time doing FreeCodeCamp certification for three reasons.
 
