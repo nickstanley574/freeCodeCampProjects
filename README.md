@@ -32,11 +32,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://githu
 
 GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
-* [#1 Random Quote Machine](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/RandomQuoteMachine/)
-* [#2 Markdown Previewer](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/MarkdownPreviewer/)
-* [#3 Drum Machine](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/DrumMachine/)
-* [#4 JavaScript Calculator](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/JavaScriptCalculator/)
-* [#5 Pomodoro Clock](https://freecodecamp-projects-ns574.herokuapp.com/FrontEndLibraries/PomodoroClock/)
+* [#1 Random Quote Machine](/FrontEndLibraries/RandomQuoteMachine/)
+* [#2 Markdown Previewer](/FrontEndLibraries/MarkdownPreviewer/)
+* [#3 Drum Machine](/FrontEndLibraries/DrumMachine/)
+* [#4 JavaScript Calculator](/FrontEndLibraries/JavaScriptCalculator/)
+* [#5 Pomodoro Clock](/FrontEndLibraries/PomodoroClock/)
 
 
 <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="45%"/>
