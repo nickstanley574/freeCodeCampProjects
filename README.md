@@ -19,11 +19,11 @@ Third, I am not a app developer, but  I support fronted pipelines, testing proce
 
 GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
 
-* [#1 Build a Tribute Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Build-a-Trubute-Page/)
-* [#2 Build a Survey Form](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Survey-Form/)
-* [#3 Build a Product Landing Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Product-Landing-Page/)
-* [#4 Build a Technical Documentation Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Technical-Documentation-Page/)
-* [#5 Build a Personal Portfolio Webpage](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/PersonalPortfolioWebpage/)
+* [#1 Build a Tribute Page](/ResponsiveWebDesign/Build-a-Trubute-Page/)
+* [#2 Build a Survey Form](/ResponsiveWebDesign/Survey-Form/)
+* [#3 Build a Product Landing Page](/ResponsiveWebDesign/Product-Landing-Page/)
+* [#4 Build a Technical Documentation Page](/ResponsiveWebDesign/Technical-Documentation-Page/)
+* [#5 Build a Personal Portfolio Webpage](/ResponsiveWebDesign/PersonalPortfolioWebpage/)
 
 <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="45%"/>
 
@@ -45,11 +45,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 
 GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
-* [#1 Visualize Data with a Bar Chart](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataBarChart/)
-* [#2 Visualize Data with a Scatterplot Graph](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataScatterplotGraph/)
-* [#3 Visualize Data with a Heat Map](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataHeatMap/)
-* [#4 Visualize Data with a Choropleth Map](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeChoroplethMap/)
-* [#5 Visualize Data with a Treemap Diagram](https://freecodecamp-projects-ns574.herokuapp.com/DataVisualization/VisualizeDataTreemapDiagram/)
+* [#1 Visualize Data with a Bar Chart](/DataVisualization/VisualizeDataBarChart/)
+* [#2 Visualize Data with a Scatterplot Graph](/DataVisualization/VisualizeDataScatterplotGraph/)
+* [#3 Visualize Data with a Heat Map](/DataVisualization/VisualizeDataHeatMap/)
+* [#4 Visualize Data with a Choropleth Map](/DataVisualization/VisualizeChoroplethMap/)
+* [#5 Visualize Data with a Treemap Diagram](/DataVisualization/VisualizeDataTreemapDiagram/)
 
 <img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="45%"/>
 
