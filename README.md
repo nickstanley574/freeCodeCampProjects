@@ -19,11 +19,11 @@ Third, I am not a app developer, but  I support fronted pipelines, testing proce
 
 GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
 
-* [#1 Build a Tribute Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Build-a-Trubute-Page/)
-* [#2 Build a Survey Form](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Survey-Form/)
-* [#3 Build a Product Landing Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Product-Landing-Page/)
-* [#4 Build a Technical Documentation Page](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/Technical-Documentation-Page/)
-* [#5 Build a Personal Portfolio Webpage](https://freecodecamp-projects-ns574.herokuapp.com/ResponsiveWebDesign/PersonalPortfolioWebpage/)
+* [#1 Build a Tribute Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Build-a-Trubute-Page/)
+* [#2 Build a Survey Form](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Survey-Form/)
+* [#3 Build a Product Landing Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Product-Landing-Page/)
+* [#4 Build a Technical Documentation Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Technical-Documentation-Page/)
+* [#5 Build a Personal Portfolio Webpage](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/PersonalPortfolioWebpage/)
 
 <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="45%"/>
 
