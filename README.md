@@ -19,11 +19,11 @@ Third, I am not a app developer, but  I support fronted pipelines, testing proce
 
 GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
 
-* [#1 Build a Tribute Page](/freeCodeCampProjects//ResponsiveWebDesign/Build-a-Trubute-Page/)
-* [#2 Build a Survey Form](/freeCodeCampProjects//ResponsiveWebDesign/Survey-Form/)
-* [#3 Build a Product Landing Page](/freeCodeCampProjects//ResponsiveWebDesign/Product-Landing-Page/)
-* [#4 Build a Technical Documentation Page](/freeCodeCampProjects//ResponsiveWebDesign/Technical-Documentation-Page/)
-* [#5 Build a Personal Portfolio Webpage](/freeCodeCampProjects//ResponsiveWebDesign/PersonalPortfolioWebpage/)
+* [#1 Build a Tribute Page](https://nickstanley574.github.io/freeCodeCampProjects/ResponsiveWebDesign/Build-a-Trubute-Page/)
+* [#2 Build a Survey Form](https://nickstanley574.github.io/freeCodeCampProjects//ResponsiveWebDesign/Survey-Form/)
+* [#3 Build a Product Landing Page](https://nickstanley574.github.io/freeCodeCampProjects//ResponsiveWebDesign/Product-Landing-Page/)
+* [#4 Build a Technical Documentation Page](https://nickstanley574.github.io/freeCodeCampProjects//ResponsiveWebDesign/Technical-Documentation-Page/)
+* [#5 Build a Personal Portfolio Webpage](https://nickstanley574.github.io/freeCodeCampProjects//ResponsiveWebDesign/PersonalPortfolioWebpage/)
 
 <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="45%"/>
 
