@@ -19,11 +19,11 @@ Third, I am not a app developer, but  I support fronted pipelines, testing proce
 
 GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/ResponsiveWebDesign)
 
-* [#1 Build a Tribute Page](/ResponsiveWebDesign/Build-a-Trubute-Page/)
-* [#2 Build a Survey Form](/ResponsiveWebDesign/Survey-Form/)
-* [#3 Build a Product Landing Page](/ResponsiveWebDesign/Product-Landing-Page/)
-* [#4 Build a Technical Documentation Page](/ResponsiveWebDesign/Technical-Documentation-Page/)
-* [#5 Build a Personal Portfolio Webpage](/ResponsiveWebDesign/PersonalPortfolioWebpage/)
+* [#1 Build a Tribute Page](/freeCodeCampProjects//ResponsiveWebDesign/Build-a-Trubute-Page/)
+* [#2 Build a Survey Form](/freeCodeCampProjects//ResponsiveWebDesign/Survey-Form/)
+* [#3 Build a Product Landing Page](/freeCodeCampProjects//ResponsiveWebDesign/Product-Landing-Page/)
+* [#4 Build a Technical Documentation Page](/freeCodeCampProjects//ResponsiveWebDesign/Technical-Documentation-Page/)
+* [#5 Build a Personal Portfolio Webpage](/freeCodeCampProjects//ResponsiveWebDesign/PersonalPortfolioWebpage/)
 
 <img src="ResponsiveWebDesign/ResponsiveWebDesignCertificate.png" alt="FCC Responsive Web Design Certificate" width="45%"/>
 
@@ -32,11 +32,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://githu
 
 GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
-* [#1 Random Quote Machine](/FrontEndLibraries/RandomQuoteMachine/)
-* [#2 Markdown Previewer](/FrontEndLibraries/MarkdownPreviewer/)
-* [#3 Drum Machine](/FrontEndLibraries/DrumMachine/)
-* [#4 JavaScript Calculator](/FrontEndLibraries/JavaScriptCalculator/)
-* [#5 Pomodoro Clock](/FrontEndLibraries/PomodoroClock/)
+* [#1 Random Quote Machine](/freeCodeCampProjects//FrontEndLibraries/RandomQuoteMachine/)
+* [#2 Markdown Previewer](/freeCodeCampProjects//FrontEndLibraries/MarkdownPreviewer/)
+* [#3 Drum Machine](/freeCodeCampProjects//FrontEndLibraries/DrumMachine/)
+* [#4 JavaScript Calculator](/freeCodeCampProjects//FrontEndLibraries/JavaScriptCalculator/)
+* [#5 Pomodoro Clock](/freeCodeCampProjects//FrontEndLibraries/PomodoroClock/)
 
 
 <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="45%"/>
@@ -45,11 +45,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 
 GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
-* [#1 Visualize Data with a Bar Chart](/DataVisualization/VisualizeDataBarChart/)
-* [#2 Visualize Data with a Scatterplot Graph](/DataVisualization/VisualizeDataScatterplotGraph/)
-* [#3 Visualize Data with a Heat Map](/DataVisualization/VisualizeDataHeatMap/)
-* [#4 Visualize Data with a Choropleth Map](/DataVisualization/VisualizeChoroplethMap/)
-* [#5 Visualize Data with a Treemap Diagram](/DataVisualization/VisualizeDataTreemapDiagram/)
+* [#1 Visualize Data with a Bar Chart](/freeCodeCampProjects//DataVisualization/VisualizeDataBarChart/)
+* [#2 Visualize Data with a Scatterplot Graph](/freeCodeCampProjects//DataVisualization/VisualizeDataScatterplotGraph/)
+* [#3 Visualize Data with a Heat Map](/freeCodeCampProjects//DataVisualization/VisualizeDataHeatMap/)
+* [#4 Visualize Data with a Choropleth Map](/freeCodeCampProjects//DataVisualization/VisualizeChoroplethMap/)
+* [#5 Visualize Data with a Treemap Diagram](/freeCodeCampProjects//DataVisualization/VisualizeDataTreemapDiagram/)
 
 <img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="45%"/>
 
