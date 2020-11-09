@@ -32,11 +32,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/ResponsiveWebDesign/](https://githu
 
 GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
-* [#1 Random Quote Machine](/freeCodeCampProjects//FrontEndLibraries/RandomQuoteMachine/)
-* [#2 Markdown Previewer](/freeCodeCampProjects//FrontEndLibraries/MarkdownPreviewer/)
-* [#3 Drum Machine](/freeCodeCampProjects//FrontEndLibraries/DrumMachine/)
-* [#4 JavaScript Calculator](/freeCodeCampProjects//FrontEndLibraries/JavaScriptCalculator/)
-* [#5 Pomodoro Clock](/freeCodeCampProjects//FrontEndLibraries/PomodoroClock/)
+* [#1 Random Quote Machine](https://nickstanley574.github.io/freeCodeCampProjects//FrontEndLibraries/RandomQuoteMachine/)
+* [#2 Markdown Previewer](https://nickstanley574.github.io/freeCodeCampProjects//FrontEndLibraries/MarkdownPreviewer/)
+* [#3 Drum Machine](https://nickstanley574.github.io/freeCodeCampProjects//FrontEndLibraries/DrumMachine/)
+* [#4 JavaScript Calculator](https://nickstanley574.github.io/freeCodeCampProjects//FrontEndLibraries/JavaScriptCalculator/)
+* [#5 Pomodoro Clock](https://nickstanley574.github.io/freeCodeCampProjects//FrontEndLibraries/PomodoroClock/)
 
 
 <img src="FrontEndLibraries/FrontEndLibrariesCertification.png" alt="Front End Libraries Certificate" width="45%"/>
@@ -45,11 +45,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.
 
 GitHub: [nickstanley574/freeCodeCampProjects/FrontEndLibraries/](https://github.com/nickstanley574/freeCodeCampProjects/tree/master/FrontEndLibraries)
 
-* [#1 Visualize Data with a Bar Chart](/freeCodeCampProjects//DataVisualization/VisualizeDataBarChart/)
-* [#2 Visualize Data with a Scatterplot Graph](/freeCodeCampProjects//DataVisualization/VisualizeDataScatterplotGraph/)
-* [#3 Visualize Data with a Heat Map](/freeCodeCampProjects//DataVisualization/VisualizeDataHeatMap/)
-* [#4 Visualize Data with a Choropleth Map](/freeCodeCampProjects//DataVisualization/VisualizeChoroplethMap/)
-* [#5 Visualize Data with a Treemap Diagram](/freeCodeCampProjects//DataVisualization/VisualizeDataTreemapDiagram/)
+* [#1 Visualize Data with a Bar Chart](https://nickstanley574.github.io/freeCodeCampProjects//DataVisualization/VisualizeDataBarChart/)
+* [#2 Visualize Data with a Scatterplot Graph](https://nickstanley574.github.io/freeCodeCampProjects//DataVisualization/VisualizeDataScatterplotGraph/)
+* [#3 Visualize Data with a Heat Map](https://nickstanley574.github.io/freeCodeCampProjects//DataVisualization/VisualizeDataHeatMap/)
+* [#4 Visualize Data with a Choropleth Map](https://nickstanley574.github.io/freeCodeCampProjects//DataVisualization/VisualizeChoroplethMap/)
+* [#5 Visualize Data with a Treemap Diagram](https://nickstanley574.github.io/freeCodeCampProjects//DataVisualization/VisualizeDataTreemapDiagram/)
 
 <img src="DataVisualization/DataVisualizationCertificate.png" alt="Data Visualization Certificate" width="45%"/>
 
