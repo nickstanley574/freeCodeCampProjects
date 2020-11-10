@@ -30,19 +30,11 @@
         // $("#nav-placeholder").load("nav.html");
         console.log("hello world");
         fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/nav.html')
-            .then(res => res.blob()) // Gets the response and returns it as a blob
-            .then(blob => {
-                // Here's where you get access to the blob
-                // And you can use it for whatever you want
-                // Like calling ref().put(blob)
-
-                // Here, I use it to make an image appear on the page
-                // let objectURL = URL.createObjectURL(blob);
-                // let myImage = new Image();
-                // myImage.src = objectURL;
-                // document.getElementById('myImg').appendChild(myImage)
-                console.log(blob)
-            });
+            .then(response => response.text())
+            .then((response) => {
+                console.log(response)
+            })
+            .catch(err => console.log(err))
     });
 </script>
 
