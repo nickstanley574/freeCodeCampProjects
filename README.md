@@ -1,13 +1,5 @@
 <div id="nav-placeholder"></div>
 
-<script>
-// $(function(){
-//   $("#nav-placeholder").load("nav.html");
-// });
- console.log("Hello world!"); 
-</script>
-
-
 # FreeCodeCamp Projects
 
 Certification Homepage: [fcc-responsivewebdesign-ns574](https://freecodecamp-projects-ns574.herokuapp.com/)
@@ -88,3 +80,11 @@ GitHub: [nickstanley574/freeCodeCampProjects/APIsAndMicroservices/](https://gith
 * [#5 File Metadata Microservice](https://fcc-filemetadata-ns574.herokuapp.com)
 
 <img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="45%"/>
+
+
+<script>
+// $(function(){
+//   $("#nav-placeholder").load("nav.html");
+// });
+ console.log("Hello world!"); 
+</script>
