@@ -28,16 +28,14 @@
 
 <script>
     $(function() {
-        console.log("--- hello world ---");
         fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/nav.html')
             .then(response => response.text())
             .then((response) => {
                 console.log(response)
-                $("#nav-placeholder").load(response);
+                $("#nav-placeholder").append(response);
 
             })
             .catch(err => console.log(err))
-        console.log("--- end world ---");
 
     });
 </script>
