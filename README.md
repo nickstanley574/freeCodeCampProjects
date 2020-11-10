@@ -81,10 +81,6 @@ GitHub: [nickstanley574/freeCodeCampProjects/APIsAndMicroservices/](https://gith
 
 <img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="45%"/>
 
-
-<script>
-// $(function(){
-//   $("#nav-placeholder").load("nav.html");
-// });
- console.log("Hello world!"); 
-</script>
+{% highlight javascript %}
+console.log("Hello world!"); 
+{% endhighlight %}
