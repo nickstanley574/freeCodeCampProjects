@@ -1,5 +1,13 @@
 <div id="nav-placeholder"></div>
 
+<script>
+// $(function(){
+//   $("#nav-placeholder").load("nav.html");
+// });
+ console.log("Hello world!"); 
+</script>
+
+
 # FreeCodeCamp Projects
 
 Certification Homepage: [fcc-responsivewebdesign-ns574](https://freecodecamp-projects-ns574.herokuapp.com/)
