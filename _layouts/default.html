@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: " en-US " }}">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> {% seo %}
-    <link rel="stylesheet" href="https://nickstanley574.github.io/assets/css/styles.css">
-</head>
+<div id="head-placeholder"></div>
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -32,6 +27,15 @@
             .then(response => response.text())
             .then((response) => {
                 $("#nav-placeholder").append(response);
+
+            })
+            .catch(err => console.log(err))
+    });
+    $(function() {
+        fetch('https://github.com/nickstanley574/nickstanley574.github.io/blob/master/_includes/head.html')
+            .then(response => response.text())
+            .then((response) => {
+                $("#head-placeholder").append(response);
 
             })
             .catch(err => console.log(err))
