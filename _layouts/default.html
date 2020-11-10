@@ -10,7 +10,7 @@
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-<body>
+<body class=page-content>
     <div id="nav-placeholder"></div>
     <div class="container-lg px-3 my-5 markdown-body">
         {{ content }} {% if site.github.private != true and site.github.license %}
@@ -31,12 +31,10 @@
         fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/nav.html')
             .then(response => response.text())
             .then((response) => {
-                console.log(response)
                 $("#nav-placeholder").append(response);
 
             })
             .catch(err => console.log(err))
-
     });
 </script>
 
