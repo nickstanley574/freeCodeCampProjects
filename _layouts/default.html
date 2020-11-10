@@ -17,7 +17,7 @@
         fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/nav.html')
             .then(response => response.text())
             .then((response) => {
-                $("#nav-placeholder").append(response);
+                $("#nav-placeholder").html(response);
             })
             .catch(err => console.log(err))
     });
