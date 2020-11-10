@@ -32,7 +32,7 @@
             .catch(err => console.log(err))
     });
     $(function() {
-        fetch('https://github.com/nickstanley574/nickstanley574.github.io/blob/master/_includes/head.html')
+        fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/head.html')
             .then(response => response.text())
             .then((response) => {
                 $("#head-placeholder").append(response);
