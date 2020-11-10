@@ -1,5 +1,3 @@
-<div id="nav-placeholder"></div>
-
 # FreeCodeCamp Projects
 
 Certification Homepage: [fcc-responsivewebdesign-ns574](https://freecodecamp-projects-ns574.herokuapp.com/)
@@ -80,7 +78,3 @@ GitHub: [nickstanley574/freeCodeCampProjects/APIsAndMicroservices/](https://gith
 * [#5 File Metadata Microservice](https://fcc-filemetadata-ns574.herokuapp.com)
 
 <img src="APIsAndMicroservices/APIsAndMicroservicesCertifcate.png" alt="JavaScript Algorithms and DataStructures Certification" width="45%"/>
-
-{% highlight javascript %}
-console.log("Hello world!"); 
-{% endhighlight %}
