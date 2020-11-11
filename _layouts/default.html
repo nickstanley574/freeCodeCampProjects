@@ -16,7 +16,8 @@
         fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/head.html')
             .then(response => response.text())
             .then((response) => {
-                $('head').append(response.replace('{{ page.title }}', "FreeCodeCamp"));
+                $('head').append(response);
+                $('head').append("<title>FreeCodeCamp | nickstanley574</title>");
             })
             .catch(err => console.log(err))
     });
