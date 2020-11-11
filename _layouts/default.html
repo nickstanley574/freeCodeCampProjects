@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<div id="head-placeholder"></div>
+<head></head>
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -17,8 +17,7 @@
     fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/head.html')
         .then(response => response.text())
         .then((response) => {
-            $("#head-placeholder ").replaceWith(response);
-
+            $('head').append(response);
         })
         .catch(err => console.log(err))
     });
