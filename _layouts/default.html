@@ -6,7 +6,7 @@
 
 <body>
     <div id="nav-placeholder"></div>
-    <div class=page-content ">
+    <div class="page-content">
         {{ content }}
     </div>
 </body>
@@ -14,18 +14,18 @@
 
 <script>
     $(function() {
-    fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/head.html')
-        .then(response => response.text())
-        .then((response) => {
-            $('head').append(response);
-        })
-        .catch(err => console.log(err))
+        fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/head.html')
+            .then(response => response.text())
+            .then((response) => {
+                $('head').append(response);
+            })
+            .catch(err => console.log(err))
     });
     $(function() {
         fetch('https://raw.githubusercontent.com/nickstanley574/nickstanley574.github.io/master/_includes/nav.html')
             .then(response => response.text())
             .then((response) => {
-                $("#nav-placeholder ").replaceWith(response);
+                $("#nav-placeholder").replaceWith(response);
             })
             .catch(err => console.log(err))
     });
